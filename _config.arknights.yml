@@ -29,7 +29,7 @@ post:
     # 支付宝 | Alipay: img/Alipay.png
     # 微信 | Wechat: img/WeChat.png
   # 以下两项依赖 hexo-wordcount，请参阅 README 开启
-  count: false # 是否显示字数统计
+  count: true # 是否显示字数统计
   time: false # 是否显示预计阅读时长
 
 # 文章内目录
@@ -60,10 +60,16 @@ search:
 # Valine
 # 详见 https://valine.js.org
 valine:
-  enable: false
-  app_id: # APP ID
-  app_key: # APP KEY
-  server_url: # APP DOMAIN（LeanCloud 国际版）
+  enable: true
+  app_id: 9yotNelhEnpJYdOACMzyugxr-MdYXbMMI
+  app_key: NeJdIygEckdSIaFKldiwfeC8
+  server_url: 
+    - https://9yotnelh.api.lncldglobal.com
+    - https://9yotnelh.engine.lncldglobal.com
+    - https://9yotnelh.rtm.lncldglobal.com
+    - https://9yotnelh.push.lncldglobal.com
+    - https://app-router.com
+  placeholder: By the power of language
 
 # gitalk
 # 详见 https://github.com/gitalk/gitalk
@@ -102,3 +108,4 @@ stylesheets:
 
 # 在 `<body>` 尾部引入 JavaScript 脚本
 scripts:
+
