@@ -8,19 +8,6 @@ if theme.waline !== undefined && theme.waline.enable === true
         serverURL: '#{theme.waline.server_url}',
         dark: true,
         emoji: ['https://unpkg.com/@waline/emojis@1.1.0/tieba'],
-        pageview: true,
-        comments: true,
-        locale: {
-          level0: '学员',
-          level1: '见习',
-          level2: '正统',
-          level3: '导师',
-          level4: '王国',
-          level5: '奇迹',
-          level6: '勇士',
-          placeholder: 'By the power of language.',
-          sofa: '空空如也'
-                },
       });
 script.pjax-js reset=_=>{
   if theme.valine !== undefined && theme.valine.enable === true
