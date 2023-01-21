@@ -2,7 +2,7 @@
 canvas_dust: true
 
 # <body> 背景图片链接
-background_image: https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg
+background_image: https://s1.ax1x.com/2023/01/21/pSGUgUA.png
 
 # 导航栏
 menu:
@@ -17,7 +17,7 @@ aside:
   logo: https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png #图片链接，建议 1:1 比例
   dr: / # 侧边栏 Dr. 链接
   icp: # ICP 备案号，与版权声明相同，但会链接到 https://beian.miit.gov.cn/
-  copyright: # 版权声明、备案号等，可自定义键值，不想显示则留空
+  copyright: 
 
 # post 文章页面配置；true / false
 post:
@@ -47,7 +47,7 @@ archives:
 search:
   enable: true
   content: true # 若为 false，仅可搜索标题及 metadata
-  preload: false # 自动加载搜索数据
+  preload: all # 自动加载搜索数据
   # 设为 post 时，仅可搜索 post 页面
   # 设为 page 时，仅可搜索非 post 页面
   # 设为 all 时，可搜索全部页面
@@ -60,15 +60,11 @@ search:
 # Valine
 # 详见 https://valine.js.org
 valine:
-  enable: true
+  enable: false
   app_id: 9yotNelhEnpJYdOACMzyugxr-MdYXbMMI
   app_key: NeJdIygEckdSIaFKldiwfeC8
-  server_url: 
-    - https://9yotnelh.api.lncldglobal.com
-    - https://9yotnelh.engine.lncldglobal.com
-    - https://9yotnelh.rtm.lncldglobal.com
-    - https://9yotnelh.push.lncldglobal.com
-    - https://app-router.com
+  server_url: https://9yotnelh.api.lncldglobal.com
+
   placeholder: By the power of language
 
 # gitalk
@@ -85,8 +81,8 @@ gitalk:
 # Waline
 # 详情: https://waline.js.org/
 waline:
-  enable: false 
-  server_url: #Server_Url
+  enable: true
+  server_url: https://comments.angine.tech/
 
 # 图表支持
 mermaid:
@@ -99,7 +95,7 @@ pjax:
 
 # 公式前端渲染
 mathjax:
-  enable: false
+  enable: true
   version: '2.6.1'
 
 # 在 `<head>` 标签内引入 CSS 样式表

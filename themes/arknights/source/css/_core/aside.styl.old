@@ -18,9 +18,9 @@ aside
     font-family BenderLight, sans-serif
     margin-top 0
   footer
-    color hsl(0, 0%, 54%)
+    color #898989
     padding 0 3px 30px 3px
-    font-family "Fira Code", "Microsoft Yahei"
+    font-family BenderLight
 
 #logo
   user-select none
@@ -61,10 +61,10 @@ aside
     transition .8s
   @media ( min-width 769px )
     &:hover
-      border-color #3dc9c2
+      border-color #2bf
       background-color rgba(#fff, .1)
       .total-number
-        color #3dc9c2
+        color #2bf
 
 #total-tags, #total-categories
   margin 15px 0 0 15px
@@ -76,7 +76,7 @@ aside
     letter-spacing 2px
   @media ( min-width 769px )
     &:hover h1
-      background-color #3dc9c2
+      background-color #2bf
   h1
     transition 1s
     color #000

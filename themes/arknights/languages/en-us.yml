@@ -3,14 +3,14 @@ name: english
 
 page:
   readMore: READ MORE +
-  noTag: empty
+  noTag: untagged
   noCategory: NO CATEGORY
 
 post:
   posted: "First Post: "
   edited: "Last Update: "
   countTotal: "Word Count: "
-  timeTotal: "Read Time: "
+  timeTotal: "Time Estimated: "
   timeUnit: min
   index: Catalog
   reward: reward
@@ -37,14 +37,14 @@ menu:
   total: Total
 
 search:
-  activeHolder: Enter here
+  activeHolder: Type here
   blurHolder: Search the blog
-  noResult: Data "$0" not found
+  noResult: No results about $0
 
 footer:
-  publish: Published with
+  publish: Published using
   theme: Theme
   by: by
 
 Valine:
-  placeHolder: This comment is sent by Penguin Logistics.
+  placeHolder: By the power of language.

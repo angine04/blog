@@ -118,12 +118,12 @@ nav
     display block
 .active
   &>:is(a,.navBlock)>.navItemTitle,&>.navItemTitle
-    color #3dc9c2
+    color #2bf
     &::after
       content ""
       display block
-      color #3dc9c2
-      border-color #3dc9c2
+      color #2bf
+      border-color #2bf
       width 100%
       position absolute
       left 0
@@ -198,7 +198,7 @@ extendList()
       bottom 0
       right 0
   .active>:is(a,.navBlock)>.navItemTitle::after
-    border-color #3dc9c2
+    border-color #2bf
   .expanded .navContent
     transform translateX(0%)
   .navItemList
@@ -216,7 +216,7 @@ extendList()
       extendList()
     &>.navItemTitle:not(:only-child)::before
       content '▽'
-      color #3dc9c2
+      color #2bf
 
 @media ( min-width 1024px )
   header
@@ -241,11 +241,11 @@ extendList()
       padding 0
       .navItemTitle
         box-sizing border-box
-        color #3dc9c2
+        color #2bf
       a:hover .navItemTitle
         color #000
       &:hover>.navItemTitle
-        background-color #3dc9c2
+        background-color #2bf
         color #000
   .navBlock,.navItem
     &:hover

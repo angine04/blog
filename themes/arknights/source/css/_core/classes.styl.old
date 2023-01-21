@@ -7,7 +7,7 @@
   font-family sans-serif
   display inline-block
 .text-title
-  background-color #3dc9c2
+  background-color #2bf
 .text-content
   margin 0 10px 0 0
   padding 0 28px 0 5px
@@ -85,17 +85,17 @@
       font-size 0.75em
       @media (min-width 769px)
         &:hover
-          border 1px solid #3dc9c2
-          color  #3dc9c2
+          border 1px solid #fe2
+          color  #fe2
           transition .3s
       @media (max-width 768px)
         &:active
-          border 1px solid #3dc9c2
-          color  #3dc9c2
+          border 1px solid #fe2
+          color  #fe2
           transition .3s
     .copied
-      border 1px solid #3dc9c2
-      color  #3dc9c2
+      border 1px solid #fe2
+      color  #fe2
       transition .3s
 
 table
@@ -108,7 +108,7 @@ table
     position sticky
     color #000
     text-align right
-    background-color #3dc9c2
+    background-color #2bf
     left 0
     padding 0 8px 5px 8px
     &, pre, span

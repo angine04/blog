@@ -2,7 +2,7 @@ aside
   #aside-top
     #about
       a(href=config.root)#logo
-        img(src= asideLogo, alt= "Logo")
+        img(src= '/images/logo.png', alt= "Logo")
       h1#Dr
         a(href= theme.aside.dr)= config.author
       #description
@@ -31,11 +31,16 @@ aside
           span.text-title= title
           span.text-content= content
         br
+    <div style="display:flex;text-align:justify"><span><a style="pointer-events:none" rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />如无特殊说明，本站<b>所有作品</b>均采用<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。转载请注明出处。</span></div>
+    br
     nobr #{__('footer.publish')} 
       a(href= 'http://hexo.io') Hexo
     wbr
     nobr  #{__('footer.theme')} 
-      a(href= 'https://github.com/Yue-plus/hexo-theme-arknights') Arknight
+      a(href= 'https://github.com/Yue-plus/hexo-theme-arknights') Arknights 
     wbr
     nobr #{__('footer.by')} 
       a(href= 'https://github.com/Yue-plus') Yue_plus
+    br
+    br
+    nobr <span>©2023 Angine</span>

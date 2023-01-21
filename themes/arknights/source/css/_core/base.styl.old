@@ -31,9 +31,9 @@ html, body
   pointer-events none
 
 main
-  -ms-scrollbar-base-color #3dc9c2
-  -ms-scrollbar-track-color hsl(177, 56%, 20%)
-  scrollbar-color #3dc9c2 hsl(177, 56%, 20%)
+  -ms-scrollbar-base-color #fe24
+  -ms-scrollbar-track-color #fe22
+  scrollbar-color #fe2 #69620a
   scrollbar-width thin
   scrollbar-gutter stable
 @media ( min-width 769px)
@@ -41,24 +41,24 @@ main
     width 6px
     height 6px
   ::-webkit-scrollbar-thumb
-    background-color #3dc9c2
+    background-color #fe24
     border-radius .25em
   ::-webkit-scrollbar-track
-    background-color hsl(177, 56%, 20%)
+    background-color #fe22
   ::-webkit-scrollbar-thumb:hover
-    background-color #60d2cc
+    background-color #fe2a
   ::-webkit-scrollbar-thumb:window-inactive
-    background-color #3dc9c2
+    background-color #fe22
 
 body
   margin 0
-  color hsl(0, 0%, 88%)
+  color #c4c4c4
   background-color #141516
   background-attachment fixed
   background-position 50% 0
   background-repeat no-repeat
   background-size cover
-  font-family 'Microsoft YaHei', '\5b8b\4f53', sans-serif
+  font-family "JetBrains Mono", 'Microsoft YaHei', '\5b8b\4f53', sans-serif
 
 h1, h2, h3, h4, h5, h6
   color #fff
@@ -92,7 +92,7 @@ a
 
 a,
 :is(strong, em)>a
-  color #3dc9c2
+  color #2bf
   padding 0 3px
   transition color .3s,
     background-color .3s,
@@ -103,7 +103,7 @@ a,
   @media ( min-width 769px )
     &:hover
       color #000
-      background-color #3dc9c2
+      background-color #22bbff
     &:active
       color #000
       background-color #fe2
@@ -112,7 +112,7 @@ time
   font-family BenderLight
 
 code, pre
-  font-family "Fira Code"
+  font-family "JetBrains Mono"
 code
   margin 0!important
   background-color rgba(#fff, .1)
@@ -128,19 +128,19 @@ kbd
   margin 0 2px
   border-radius 2px
   padding 0 3px
-  font-family "Fira Code"
+  font-family "JetBrains Mono"
 
 em
   font-family Times, "Times New Roman", 'FangSong', 'SimSun', serif
 strong em, em strong
-  font-family 'Microsoft YaHei', '\5b8b\4f53', sans-serif
+  font-family "JetBrains Mono", 'Microsoft YaHei', '\5b8b\4f53', sans-serif
 :not(a)>:is(strong, em)
   color #fff
 :not(a)>:is(strong em, em strong)
   color #C0392B
 
 blockquote
-  border-left #3dc9c2 solid 5px
+  border-left #2bf solid 5px
   padding 3px 20px
   background-color rgba(#fff, .05)
   transition .3s
@@ -169,11 +169,11 @@ table
     padding 0 10px
   td
     padding 0px 8px
-    border #3dc9c2 solid 1px
+    border #2bf solid 1px
     &:hover
-      background-color rgba(#3dc9c2, .1)
+      background-color rgba(#2bf, .1)
 
 input
   cursor url(cursor) 3 3, text
   user-select none
-  font-family 'Microsoft YaHei', '\5b8b\4f53', sans-serif
+  font-family "JetBrains Mono", 'Microsoft YaHei', '\5b8b\4f53', sans-serif

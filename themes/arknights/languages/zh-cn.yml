@@ -37,14 +37,14 @@ menu:
   total: 总数
 
 search:
-  activeHolder: 键入以继续
-  blurHolder: 数据检索
-  noResult: 无 $0 相关数据
+  activeHolder: Type here
+  blurHolder: Search the blog
+  noResult: 空空如也
 
 footer:
-  publish: 构建自
+  publish: 本站基于
   theme: 使用主题
   by: 主题作者
 
 Valine:
-  placeHolder: 此条评论委托企鹅物流发送
+  placeHolder: By the power of language.

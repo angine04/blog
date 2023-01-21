@@ -6,6 +6,8 @@ if theme.waline !== undefined && theme.waline.enable === true
     init({
         el: '#waline',
         serverURL: '#{theme.waline.server_url}',
+        dark: true,
+        emoji: ['https://unpkg.com/@waline/emojis@1.1.0/tieba'],
       });
 script.pjax-js reset=_=>{
   if theme.valine !== undefined && theme.valine.enable === true
@@ -13,6 +15,7 @@ script.pjax-js reset=_=>{
     |  el: '#Valine'
     |  , appId: '#{theme.valine.app_id}'
     |  , appKey: '#{theme.valine.app_key}'
+    |  , visitor: true
     if theme.valine.server_url
       | , serverURLs: '#{theme.valine.server_url}'
     |  , placeholder: '#{__('Valine.placeHolder')}'
