@@ -9,7 +9,7 @@ page:
 post:
   posted: "文章发布时间: "
   edited: "最后更新时间: "
-  countTotal: "文章总字数: "
+  countTotal: "文章字数: "
   timeTotal: "预计阅读时间: "
   timeUnit: 分钟
   index: 文章目录
@@ -24,8 +24,8 @@ code:
 
 menu:
   archive:
-    name: 文章
-    plural: 文章
+    name: 归档
+    plural: 归档
   navigation: 导航
   tag:
     name: 标签

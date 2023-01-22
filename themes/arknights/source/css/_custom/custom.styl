@@ -25,13 +25,10 @@ input::-webkit-input-placeholder{
     color #aaa
 }
 
-#valine input::-webkit-input-placeholder{
+#input::-webkit-input-placeholder{
     font-family "Fira Code" "BenderLight" "Microsoft Yahei"
 }
 
-#valine{
-    font-family "Fira Code" "BenderLight" "Microsoft Yahei"
-}
 
 #pages
     border-color rgba(0, 0, 0, 0)
@@ -62,6 +59,9 @@ blockquote
 #post-content p
     display flex
     text-align justify
+
+del
+    color #666
 
 :root {
   /* 字体大小 */
@@ -148,4 +148,28 @@ darkmode-selector {
 
 #waline {
     margin 36px 30px !important
+}
+
+.wl-login-nick{
+    padding 0 0    
+}
+
+#creative-commons-img{
+    background-color: rgba(0,0,0,0) !important
+}
+
+@media (min-width 769px){
+    #creative-commons{
+        display: flex;
+        text-align: justify
+    }
+}
+
+
+@media (max-width 769px){
+    #creative-commons{
+        margin-top: 36px;
+        display: flex;
+        text-align: center
+    }
 }

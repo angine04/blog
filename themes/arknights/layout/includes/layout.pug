@@ -35,6 +35,11 @@
 doctype html
 html(lang=config.language)
   head
+    script(src='/scripts/since.js')
+    script(async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet")
     include ./meta-data.pug
   body(style={'background-image': `url(${theme.background_image})`})
     if pjax

@@ -4,11 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>エラー発生。</title>
+  <title>404 - Not Found | Angine's Blog</title>
   <style>
     @font-face {
       font-family: 'JetBrains Mono';
-      src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+      src: local('JetBrains Mono'), url('font/JetBrainsMono-Regular.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Fira Code';
+      src: local('Fira Code'), url('font/FiraCode.ttf');
     }
 
     html,
@@ -20,9 +25,9 @@
       margin: 0;
       color: #FFF;
       background-color: #141516;
-      background-position: 50% 50%;
+      background-position: center bottom;
       background-repeat: no-repeat;
-      background-image: url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);
+      background-image: url(https://s1.ax1x.com/2023/01/21/pSGUgUA.png);
     }
 
     main {
@@ -36,6 +41,7 @@
 
     #logo img {
       width: 300px;
+      margin-top: 128px;
     }
 
     #error {
@@ -44,7 +50,7 @@
     }
 
     #error a {
-      color: #2BF;
+      color: #3dc9c2;
       padding: 3px 10px;
       font-size: larger;
       text-decoration: none;
@@ -52,7 +58,7 @@
 
     #error a:hover {
       color: #000;
-      background-color: #2BF;
+      background-color: #3dc9c2;
     }
 
     h1 {
@@ -62,7 +68,7 @@
 
     h2 {
       font-size: 32px;
-      font-family: "JetBrains Mono";
+      font-family: "Fira Code";
     }
 
     @media (max-width: 768px) {
@@ -82,12 +88,13 @@
 <body>
   <main>
     <a id="logo" href="/">
-      <img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="to home" />
+      <img src="images/logo.png" alt="to home" />
     </a>
+    <br />
     <div id="error">
-      <h1>エラー発生。</h1>
-      <h2 style="text-align: left;">404 NOT FOUND</h2>
-      <p style="text-align: left;">
+      <h1>404 NOT FOUND</h1>
+      <h2 style="text-align: center;">空无一物</h2>
+      <p style="text-align: center">
         <a href="/">首页</a>
         <a onClick="history.back();">上一页</a>
       </p>

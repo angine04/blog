@@ -7,9 +7,10 @@ background_image: https://s1.ax1x.com/2023/01/21/pSGUgUA.png
 # 导航栏
 menu:
   Home: ''
-  # About: about/
-  # Contact: contact/
   Archives: archives/
+  About: about/
+  # Contact: contact/
+
 
 # 侧边栏
 aside:
