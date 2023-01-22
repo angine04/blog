@@ -22,6 +22,13 @@ published: true
  - 看本站背景，你大概知道我玩什么游戏了吧。（应该吧）
  - 红米K20钉子户。所有挖孔的屏幕都是异端！！
 
+## 联系我
+
+ - GitHub   [@angine04](https://github.com/angine04)
+ - bilibili [安擎Angine](https://space.bilibili.com/14000846)
+ - QQ       1368420417 验证问题答案请自行查找
+ - Email    [me@angine.tech](mailto:me@angine.tech) 或 [tetsukiyocho@outlook.com](mailto:tetsukiyocho@outlook.com)
+
 # 关于本站
 
 Angine's blog.
