@@ -28,8 +28,17 @@ published: true
 
  - GitHub   [@angine04](https://github.com/angine04)
  - bilibili [安擎Angine](https://space.bilibili.com/14000846)
- - QQ       1368420417 验证问题答案藏在本页某处
- - Email    [me@angine.tech](mailto:me@angine.tech) 或 [tetsukiyocho@outlook.com](mailto:tetsukiyocho@outlook.com)
+ - QQ       1368420417
+ - Email    [me@angine.tech](mailto:me@angine.tech)
+
+欢迎交友。
+
+建议首先通过邮件联系我，互相交流熟悉一下。
+QQ为了规避各种广告营销号，设置了验证问题，可以通过以下几种方式得到验证问题答案：
+
+ - 百度；
+ - 发邮件向我询问；
+ - 按下F12，然后对本页面动一番手脚（
 
 <!-- # 关于本站
 
