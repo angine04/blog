@@ -4,7 +4,7 @@ date: 2023-01-22 02:33:30
 published: true
 ---
 
-<!-- When you're wandering about, try the spell sesameSeeds -->
+<!-- If you're wandering ABOUT, try the spell openSesame -->
 
 # 关于我
 

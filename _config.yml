@@ -113,7 +113,7 @@ mathjax:
 
 deploy:
   type: git
-  repo: https://github.com/angine04/angine04.github.io
+  repo: git@github.com:angine04/angine04.github.io
   branch: gh-pages
 
 hightlight:

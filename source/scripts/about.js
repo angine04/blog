@@ -9,13 +9,13 @@ function getUrlRelativePath() {
     return relUrl;
 }
 
-function sesameSeeds() {
-    console.log("\"Sesame Seeds...\" Whispered you.");
+function openSesame() {
+    console.log("\"Open Sesame...\" Whispered you.");
     var location = getUrlRelativePath().toString();
     if(location == "/about/"){
         console.log("The gate opens.");
         console.log("You found a scroll in the secret cave.");
-        console.log("On which nothing is written but a letter: \"y\"!");
+        console.log("On which nothing but a letter is written: \"y\"!");
         return 0;
     }else{
         console.log("Nothing happened.");
