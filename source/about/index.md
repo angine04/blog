@@ -24,7 +24,7 @@ published: true
  - 看本站背景，你大概知道我玩什么游戏了吧。（应该吧）<span id="text-secret">Minecraft（即答）</span>
  - 红米K20钉子户。所有挖孔的屏幕都是异端！！
 
-## 联系我
+# 联系我
 
  - GitHub   [@angine04](https://github.com/angine04)
  - bilibili [安擎Angine](https://space.bilibili.com/14000846)
@@ -45,4 +45,16 @@ published: true
 Angine's blog. | 安擎的博客。
 Slogan: By the power of language. | 以语言之力。
 
-##
+会记录一些涉及到技术、语言学、文艺、生活琐事、莫名其妙的感受与思考……一类的内容。
+
+Powered by Hexo. Theme Arknights designed by Yue_Plus. Website hosted using GitHub Pages.
+
+主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
+
+ - 在夸克等浏览器下，链接的显示不正确。（Won't fix）
+ - 在特定尺寸下，上方搜索框飞入动画不正确。（不会fix）
+ - Waline在开启pjax时无法自动加载。（已禁用pjax）
+
+发现其他bug欢迎提issue或者直接在本页面评论。
+
+#
