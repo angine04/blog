@@ -2,11 +2,12 @@ window.addEventListener('DOMContentLoaded', () => {
   let fetched = false, fetching = false, waiting = false
   let datas
   const path = config.root + 'search.json'
-  const input = document.querySelector('#search-input')
-  const navContent = document.querySelector('.navContent')
+  const input = getElement('#search-input')
+  const nav = getElement('nav')
   const activeHolder = config.search.activeHolder
   const blurHolder = config.search.blurHolder
   const noResult = config.search.noResult
+  const popup = getElement('.search-popup')
   function fetechData() {
     fetching = true
     fetch(path)
@@ -17,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (waiting === true) {
           inputEventFunction()
         }
-      })
+      }).catch(() => fetching = false)
   }
   if (config.search.preload) {
     fetechData()
@@ -88,27 +89,26 @@ window.addEventListener('DOMContentLoaded', () => {
     return result
   }
   function inLoading() {
-    document.querySelector('.search-popup').innerHTML = '<div id="loading"><div><p>Loading...</p></div></div>'
+    getElement('#search-result').innerHTML = '<div id="loading"><div><p>Loading...</p></div></div>'
   }
   function onPopupClose() {
     if (document.querySelector('.up') && document.querySelector('.closed')) {
-      document.querySelector('.navBtn').classList.remove('expanded')
+      getElement('.navBtn').classList.remove('expanded')
     }
-    if (window.innerWidth > 1023) {
-      document.body.classList.remove('blur')
-    }
-    document.querySelector('.search-popup').classList.remove('open')
+    getElement('#search-result').querySelectorAll('a').
+      forEach((item) => item.setAttribute('tabindex', -1))
+    document.body.classList.remove('blur')
+    popup.classList.remove('open')
   }
   function proceedSearch() {
-    if (window.innerWidth > 1023) {
-      document.body.classList.add('blur')
-    }
+    document.body.classList.add('blur')
     if (document.querySelector('.up') && document.querySelector('.closed')) {
-      document.querySelector('.navBtn').classList.add('expanded')
+      getElement('.navBtn').classList.add('expanded')
     }
-    document.querySelector('.search-popup').classList.add('open')
+    getElement('#search-result').removeAttribute('tabindex')
+    popup.classList.add('open')
     if (fetched === true) {
-      document.querySelector('.search-popup').innerHTML = "<div id='search-result'></div>"
+      popup.innerHTML = "<div id='search-result'></div>"
       document.getElementById('search-result').innerHTML = ''
     } else {
       inLoading()
@@ -132,8 +132,9 @@ window.addEventListener('DOMContentLoaded', () => {
     let resultItems = []
     if (searchText.length > 0) {
       datas.forEach(data => {
-        if (!data.title)
+        if (!data.title) {
           return
+        }
         let TextCount = 0, TitleCount = 0, ContentCount = 0
         let title = data.title.trim()
         let titleInLowerCase = title.toLowerCase()
@@ -214,9 +215,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       })
     }
-    var resultContent = document.getElementById('search-result')
+    popup.scroll({ top: 0, left: 0 })
+    let resultList = getElement('#search-result')
     if (resultItems.length === 0) {
-      resultContent.innerHTML =
+      resultList.innerHTML =
         `<div id="no-result"><p>${format(noResult, `<b>${input.value}</b>`)}</p></div>`
     } else {
       resultItems.sort((Left, Right) => {
@@ -233,10 +235,10 @@ window.addEventListener('DOMContentLoaded', () => {
       resultItems.forEach(result => {
         searchResultList += result.item
       })
-      resultContent.innerHTML = searchResultList
+      resultList.innerHTML = searchResultList
     }
     if (typeof pjax !== 'undefined') {
-      pjax.refresh(resultContent)
+      pjax.refresh(resultList)
     }
   }
   input.addEventListener('keypress', event => {
@@ -245,8 +247,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })
   function StartSearch() {
-    navContent.classList.add('search')
+    nav.classList.add('search')
     header.closeAll()
+    if (document.querySelector('.up')) {
+      getElement('main').style.pointerEvents = 'none'
+    }
     input.placeholder = activeHolder
     if (!fetched) {
       if (!fetching) {
@@ -256,35 +261,55 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
   function EscapeSearch() {
+    if (!nav.classList.contains('search')) {
+      return
+    }
+    nav.classList.remove('search')
+    onPopupClose()
     input.value = ''
-    input.blur()
-    navContent.classList.remove('search')
+    input.placeholder = blurHolder
     document.removeEventListener('mouseup', EscapeSearch)
     waiting = false
-    navContent.classList.remove('search')
-    navContent.classList.add('moved')
-    onPopupClose()
+    getElement('main').style.pointerEvents = ''
+    input.blur()
   }
   input.addEventListener('keyup', () => {
-    navContent.classList.add('search')
-    navContent.classList.remove('moved')
+    nav.classList.add('search')
     inputEventFunction()
   })
   input.addEventListener('focus', () => {
     StartSearch()
   })
-  input.addEventListener('blur', () => {
-    input.placeholder = blurHolder
-    navContent.classList.remove('search')
-    navContent.classList.add('moved')
-    document.addEventListener('mouseup', EscapeSearch)
+  input.addEventListener('blur', event => {
+    if (!event.relatedTarget ||
+      event.relatedTarget.parentElement !== getElement('#search-result')) {
+      EscapeSearch()
+    }
   })
-  window.addEventListener('keyup', event => {
+  popup.addEventListener('focusout', event => {
+    if (!event.relatedTarget ||
+      (event.relatedTarget !== input &&
+        event.relatedTarget.parentElement !== getElement('#search-result'))) {
+      EscapeSearch()
+    }
+  })
+  document.addEventListener('keyup', event => {
     if (event.key === 'Escape') {
       EscapeSearch()
-    } else if (event.key === 'f') {
+    } else if (event.key === 'f' && 
+      !['INPUT', 'TEXTAREA'].includes(event.target.tagName)) {
+      if (!document.querySelector('.up')) {
+        getElement('.navBtn').classList.remove('hide')
+        header.open()
+      }
       StartSearch()
       input.focus()
+    }
+  })
+  document.addEventListener('click', event => {
+    if (event.target.tagName === 'A' ||
+      event.target.parentElement.tagName === 'A') {
+      EscapeSearch()
     }
   })
 })
