@@ -65,4 +65,6 @@ Website hosted using GitHub Pages.
 
 **2023年1月2日**    本站使用了自有域名。告别了github.io。~~（一同告别的还有我的钱）~~
 
-**2023年1月19日**   本站开始使用Hexo。陆续进行了大量对主题的魔改和插件的安装，并实现人生第一Merge。（感谢主题作者[Yue_Plus](https://github.com/Yue-plus)。）
+**2023年1月19日**   本站开始使用Hexo。
+
+**2023年1月21日**   陆续进行了大量对主题的魔改和插件的安装。人生第一次被Merge。（感谢主题作者[Yue_Plus](https://github.com/Yue-plus)。）
