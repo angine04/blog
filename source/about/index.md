@@ -68,3 +68,5 @@ Website hosted using GitHub Pages.
 **2023年1月19日**   本站开始使用Hexo。
 
 **2023年1月21日**   陆续进行了大量对主题的魔改和插件的安装。人生第一次被Merge。（感谢主题作者[Yue_Plus](https://github.com/Yue-plus)。）
+
+**2023年3月6日**    开始记录大事记。本博客添加了第一条友链。
