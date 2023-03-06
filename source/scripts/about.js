@@ -10,11 +10,11 @@ function getUrlRelativePath() {
 }
 
 function openSesame() {
-    console.log("\"Open Sesame...\" Whispered you.");
+    console.log("\"Open Sesame...\" Whispers you.");
     var location = getUrlRelativePath().toString().substring(0,7);
     if(location == "/about/"){
         console.log("The gate opens.");
-        console.log("You found a scroll in the secret cave.");
+        console.log("You find a scroll in the secret cave.");
         console.log("On which nothing but a letter is written: \"y\"!");
         return 0;
     }else{

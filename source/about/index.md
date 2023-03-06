@@ -47,14 +47,22 @@ Slogan: By the power of language. | 以语言之力。
 
 会记录一些涉及到技术、语言学、文艺、生活琐事、莫名其妙的感受与思考……一类的内容。
 
-Powered by Hexo. Theme Arknights designed by Yue_Plus. Website hosted using GitHub Pages.
+Powered by [Hexo](https://hexo.io/). Theme [Arknights](https://github.com/Yue-plus/hexo-theme-arknights) designed by [Yue_Plus](https://github.com/Yue-plus) and modified by me.
+Website hosted using GitHub Pages.
+本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="times">多少小时</span>。
 
-主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
-
+本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
  - 在夸克等浏览器下，链接的显示不正确。（Won't fix）
  - 在特定尺寸下，上方搜索框飞入动画不正确。（不会fix）
  - Waline在开启pjax时无法自动加载。（已禁用pjax）
-
 发现其他bug欢迎提issue或者直接在本页面评论。
 
-#
+本站背景摄于瓜大Minecraft生存服五周目·阳澄湖底。大桥是天船运河公司·阳澄湖线铁路桥。
+
+## 时间线
+
+**2023年1月1日**    本站上线。其时，本站仅有一个简陋的index页面。登载了本站的[第一篇文章](/posts/e3fb662656990808/)。
+
+**2023年1月2日**    本站使用了自有域名。告别了github.io。~~（一同告别的还有我的钱）~~
+
+**2023年1月19日**   本站开始使用Hexo。陆续进行了大量对主题的魔改和插件的安装，并实现人生第一Merge。（感谢主题作者[Yue_Plus](https://github.com/Yue-plus)。）
