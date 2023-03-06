@@ -49,7 +49,7 @@ Slogan: By the power of language. | 以语言之力。
 
 Powered by [Hexo](https://hexo.io/). Theme [Arknights](https://github.com/Yue-plus/hexo-theme-arknights) designed by [Yue_Plus](https://github.com/Yue-plus) and modified by me.
 Website hosted using GitHub Pages.
-本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="times">多少小时</span>。
+本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
 本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
  - 在夸克等浏览器下，链接的显示不正确。（Won't fix）

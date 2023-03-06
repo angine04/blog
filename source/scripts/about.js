@@ -10,7 +10,7 @@ function getUrlRelativePath() {
 }
 
 function openSesame() {
-    console.log("\"Open Sesame...\" Whispers you.");
+    console.log("\"Open Sesame...\" Whisper you.");
     var location = getUrlRelativePath().toString().substring(0,7);
     if(location == "/about/"){
         console.log("The gate opens.");
