@@ -47,7 +47,7 @@ archives:
 
 # 搜索
 search:
-  enable: true
+  enable: false
   content: true # 若为 false，仅可搜索标题及 metadata
   preload: all # 自动加载搜索数据
   # 设为 post 时，仅可搜索 post 页面
