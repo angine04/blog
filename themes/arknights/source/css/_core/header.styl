@@ -7,16 +7,15 @@ header
   display inline
   position sticky
 
-@media (max-width 1023px)
-  :not(.up, .moving)>header
-    clip-path polygon(0 0, 0 100%, 100% 100%, 100% 0)
-
 nav
   position relative
   height 100%
   white-space nowrap
-  scroll-width none
-  overflow auto
+  scrollbar-width none
+  overflow hidden
+  display flex
+  flex-direction column
+  justify-content center
   &::-webkit-scrollbar
     display none
   &::-ms-scrollbar
@@ -35,8 +34,8 @@ nav
   for i in hexo-config("menu")
     List-sum += 3
   if hexo-config("search") && hexo-config("search.enable")
-    List-sum += 1
-  padding (34em/List-sum) 0
+    List-sum += 2
+  padding (30em/List-sum) 0
   width 100%
   &:active
     background unset
@@ -44,7 +43,6 @@ nav
 .navBtn
   transition transform .3s
   pointer-events all
-  
   display block
   position absolute
   top 1em
@@ -61,7 +59,7 @@ nav
   top 50%
   width 1em
   height 0.1em
-  background-color #d4d8dd
+  background-color var(--theme-btn-bg)
   text-indent 101%
   white-space nowrap
   overflow hidden
@@ -88,14 +86,8 @@ nav
 .navContent
   overflow visible
   margin unset
-  min-height 100%
-  height fit-content
-  display flex
-  flex-direction column
-  justify-content center
   position relative
   padding 0
-  box-sizing border-box
   pointer-events all
 
 .navItem
@@ -104,7 +96,7 @@ nav
   margin unset
   transition .6s
   @media ( max-width 1023px )
-    & .navItemTitle::after
+    & .navItemTitle::before
       content ""
       display block
       width 100%
@@ -118,12 +110,12 @@ nav
     display block
 .active
   &>:is(a,.navBlock)>.navItemTitle,&>.navItemTitle
-    color #3dc9c2
-    &::after
+    color var(--theme-highlight)
+    &::before
       content ""
       display block
-      color #3dc9c2
-      border-color #3dc9c2
+      color var(--theme-highlight)
+      border-color var(--theme-highlight)
       width 100%
       position absolute
       left 0
@@ -159,8 +151,6 @@ extendList()
     left 0
     .navContent
       padding-left 0
-  .navItem
-    padding-left 2.5em
 
 @media ( max-width 1023px )
   header
@@ -171,36 +161,43 @@ extendList()
     max-width 428px
     height max-content
     min-height 100vh
+    &::before
+      content ""
+      height 100%
+      width 100%
+      position absolute
+      top 0
+      left 0
+      background-color var(--theme-bg-trans0)
+      transform translateX(-100%)
+      transition transform .6s
+      pointer-events all
   .navBtn
     left 1em
   .navContent
     overflow-y auto
     transform translateX(-100%)
     width 100%
-    padding: 4.5em 2.5em 2em;
     transition transform 0.6s
-    background-color rgba(0, 0, 0, 0.88)
-    height 100vh
+  .navItem
+    padding .1em 4em
   .navBlock
     &:hover
       background-color unset
     box-sizing border-box
     align-items flex-end
-    padding 2px 2em
-    border-bottom 1px solid rgba(57, 57, 57, 0.5)
+    padding unset
     height 100%
   .navItemTitle
-    color #fff
-    padding-bottom 7px
-    &::after
-      height 0
-      border-bottom 2px solid #fff
-      bottom 0
-      right 0
-  .active>:is(a,.navBlock)>.navItemTitle::after
-    border-color #3dc9c2
-  .expanded .navContent
-    transform translateX(0%)
+    color var(--theme-text-light)
+    padding-bottom 5px
+    border-bottom 1px solid var(--theme-unimportant)
+  .active>:is(a,.navBlock)>.navItemTitle::before
+    border-color var(--theme-highlight)
+  .expanded
+    .navContent,
+    nav::before
+      transform translateX(0%)
   .navItemList
     width 100%
     &>.navItem
@@ -216,18 +213,20 @@ extendList()
       extendList()
     &>.navItemTitle:not(:only-child)::before
       content '▽'
-      color #3dc9c2
+      color var(--theme-highlight)
 
 @media ( min-width 1024px )
   header
     width 180px
+  .navItem
+    width 120px
   .navBtn
     display none
   .navBlock:hover
     background-color unset
   .navItemTitle
-    color #fff
-    &::after
+    color var(--theme-text-light)
+    &::before
       height 100%
       top 0
       box-sizing border-box
@@ -235,19 +234,20 @@ extendList()
     width max-content
     min-width 100px
     position absolute
-    background-color #000
+    background-color var(--theme-bg-hover)
     .navItem
       width 100%
       padding 0
       .navItemTitle
         box-sizing border-box
-        color #3dc9c2
+        color var(--theme-highlight)
       a:hover .navItemTitle
-        color #000
+        color var(--theme-text-hover)
       &:hover>.navItemTitle
-        background-color #3dc9c2
-        color #000
-  .navBlock,.navItem
+        background-color var(--theme-highlight)
+        color var(--theme-text-hover)
+  .navBlock,
+  .navItem
     &:hover
       extendList()
 

@@ -31,15 +31,13 @@
 doctype html
 html(lang=config.language theme-mode=theme.color)
   head
-    script(src='/scripts/since.js')
-    script(src='/scripts/about.js')
     <meta name="baidu-site-verification" content="codeva-jWEq3ogFiF" />
     script(async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js")
     link(href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet")
     include ./meta-data.pug
-  body(style={'background-image': `url(${theme.background_image})`})
+  body
     if pjax
       .loading(style='opacity: 0')
         .loadingBar.left
