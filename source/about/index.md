@@ -54,7 +54,7 @@ Website hosted using GitHub Pages.
 本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
  - 在夸克等浏览器下，链接的显示不正确。（Won't fix）
  - 在特定尺寸下，上方搜索框飞入动画不正确。（不知道咋fix）
- - Waline在开启pjax时无法自动加载。（已禁用pjax）
+ - Pjax还是有那么一点点小问题。（已禁用pjax）
 一言以蔽之：我太菜了。有缘再修吧（
 发现其他bug欢迎提issue或者直接在本页面评论。
 

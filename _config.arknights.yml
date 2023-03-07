@@ -97,7 +97,7 @@ mermaid:
 
 # pjax 支持
 pjax:
-  enable: true
+  enable: false
 
 # 公式前端渲染
 mathjax:
