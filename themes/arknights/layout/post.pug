@@ -12,7 +12,6 @@ block content
     const tocContent = encrypted === undefined ? toc(page.content, theme.toc) : toc(page.origin, theme.toc)
     const countWord = theme.post.count === true && wordcount !== undefined ? wordcount(page.content) : null
     const countTime = theme.post.time === true && min2read !== undefined ? min2read(page.content) : null
-    const pathName = theme.post.linkhash
   #post-bg
     #post-title
       h1= page.title
@@ -44,11 +43,6 @@ block content
               br
             span #{__('post.timeTotal')}
               div.control #{countTime} #{__('post.timeUnit')}
-          if !first
-            br
-          span 访问量: 
-          div.control
-            span(class='waline-pageview-count' data-path= pathName)
     hr
     #post-content
       if excerptConf || encrypted
@@ -82,13 +76,26 @@ block content
             span #{pay}
             br
             img(src=config.root + imgSrc)
-    if page.comments
-      if theme.valine.enable === true
-        #Valine
-      if theme.gitalk.enable === true
-        #comments
-      if theme.waline.enable === true
-        #waline(style="margin:0 30px;")
+    -
+      let count = (theme.valine.enable === true) +
+                  (theme.gitalk.enable === true) +
+                  (theme.waline.enable === true)
+    if page.comments && count
+      #comments
+        if count > 0
+          .selector
+            if theme.valine.enable === true
+              button.valine-sel
+            if theme.gitalk.enable === true
+              button.gitalk-sel
+            if theme.waline.enable === true
+              button.waline-sel
+        if theme.valine.enable === true
+          #valine
+        if theme.gitalk.enable === true
+          #gitalk
+        if theme.waline.enable === true
+          #waline
 
 block aside-block
   - 

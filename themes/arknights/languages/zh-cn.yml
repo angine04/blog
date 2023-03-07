@@ -22,6 +22,11 @@ code:
   copyFinish: 复制成功
   expand: 展开
 
+btn:
+  totop: 回到顶部
+  index: 文章目录
+  colorMode: 切换主题
+
 menu:
   archive:
     name: 归档

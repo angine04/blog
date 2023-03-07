@@ -9,11 +9,10 @@ class Scroll {
   private visible: boolean = false
   private touchX: number = 0
   private touchY: number = 0x7fffffff
-  private mayNotUp: boolean = false
+  private notMoveY: boolean = false
   private reallyUp: boolean = false
   private intop: boolean = false
   private totop: HTMLElement
-  private startTop: boolean = false
 
   public scrolltop = () => {
     getElement('main').scroll({ top: 0, left: 0, behavior: 'smooth' })
@@ -22,8 +21,8 @@ class Scroll {
     setTimeout(() => this.totop.style.display = 'none', 300)
   }
 
-  private totopChange = (post: HTMLElement) => {
-    if (post.getBoundingClientRect().top < -200) {
+  private totopChange = (top: number) => {
+    if (top < -200) {
       this.totop.style.display = ''
       this.visible = true
       setTimeout(() => {
@@ -78,7 +77,7 @@ class Scroll {
     setTimeout(() => getElement('main').classList.remove('moving'), 300)
   }
 
-  private setHtml = () => {
+  private setHTML = () => {
     try {
       let navBtn: HTMLElement = getElement('.navBtn')
       let onScroll = () => {
@@ -105,7 +104,7 @@ class Scroll {
             }
           }, 100)
           if (!this.getingtop) {
-            this.totopChange(getElement('#post-title'))
+            this.totopChange(nowheight)
           }
         } catch (e) {}
       }
@@ -117,35 +116,36 @@ class Scroll {
   }
 
   private checkTouchMove = (event: TouchEvent) => {
-    if (Math.abs(event.changedTouches[0].clientX - this.touchX) > 50 && !this.reallyUp) {
-      this.mayNotUp = true
+    if (Math.abs(event.changedTouches[0].screenX - this.touchX) > 50 &&
+      !this.reallyUp) {
+      this.notMoveY = true
     }
     if (document.querySelector('.expanded') ||
       window.innerWidth > 1024 ||
-      this.mayNotUp ||
-      event.changedTouches[0].clientY == this.touchY) {
+      this.notMoveY ||
+      event.changedTouches[0].screenY === this.touchY ||
+      document.querySelector('.moving')) {
       return
     }
-    if (this.startTop || getElement('article').getBoundingClientRect().top >= 0) {
+    if (getElement('article').getBoundingClientRect().top >= 0) {
       this.reallyUp = true
-      if (event.changedTouches[0].clientY > this.touchY) {
+      if (event.changedTouches[0].screenY > this.touchY) {
         this.slideUp()
       } else {
         this.slideDown()
       }
-      this.touchY = event.changedTouches[0].clientY
+      this.touchY = event.changedTouches[0].screenY
     }
   }
 
   private startTouch = (event: TouchEvent) => {
-    this.touchX = event.changedTouches[0].clientX
-    this.touchY = event.changedTouches[0].clientY
-    this.mayNotUp = false
-    this.startTop = getElement('article').getBoundingClientRect().top >= 0
+    this.touchX = event.changedTouches[0].screenX
+    this.touchY = event.changedTouches[0].screenY
+    this.notMoveY = false
   }
 
   constructor() {
-    document.addEventListener('pjax:success', this.setHtml)
+    document.addEventListener('pjax:success', this.setHTML)
     document.addEventListener('touchstart', this.startTouch)
     document.addEventListener('touchmove', this.checkTouchMove)
     document.addEventListener('wheel', (event: WheelEvent) => {
@@ -160,7 +160,7 @@ class Scroll {
         }
       }
     })
-    this.setHtml()
+    this.setHTML()
     this.totop = document.querySelector('#to-top') as HTMLElement
   }
 }

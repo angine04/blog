@@ -4,41 +4,30 @@
   aside
     right 0
 
-@media ( max-width 1023px )
-  @media (min-width 769px)
-    article
-      margin-left 5%
-  .navContent
-    padding-left 0
-    transform translateX(-100%)
-  .navItem
-    padding-left 2.5em
-
 @media ( min-width 992px, max-width 1919px )
   aside
     padding 0 25px 0 15px
 
 @media ( min-width 1024px )
   .navContent
-    margin 0 1.5em 0 0
     transform unset
   .navItem
     padding-left 1.2em
   .navBlock
     text-align right
-    .navItemTitle::after
+    .navItemTitle::before
       border-left 4px solid
-      left 0px
-    &:hover
-      &>.navItemTitle
-        margin-left 1em
-      &::after
-        content ""
-        height 100%
-        width 100%
-        position absolute
-        top 0
-        left 2em
+      left 0
+  .navContent:not(.search) .navBlock
+    &::before
+      content ""
+      height 100%
+      width 100%
+      position absolute
+      top 0
+      left 2em
+    &:hover>.navItemTitle
+      margin-left 1em
     &>.navItemList
       left calc(100% + 2em)
   .navItemList

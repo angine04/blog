@@ -1,0 +1,59 @@
+aside
+  #aside-top
+    #about
+      a(href=config.root)#logo
+        img(src= 'https://s1.ax1x.com/2023/01/23/pSJ5OVH.png', alt= "Logo")
+      h1#Dr
+        a(href= theme.aside.dr)= config.author
+      #description
+        p!= config.description
+    #aside-block
+      block aside-block
+      if page.published === undefined
+        section#total
+           a#total-archives(href= config.root + "archives")
+             span.total-title #{__('menu.archive.plural')} #{__('menu.total')}:
+             span.total-number= site.posts.length
+           #total-tags
+             span.total-title #{__('menu.tag.plural')}:
+             span.total-number= site.tags.length
+           #total-categories
+             span.total-title #{__('menu.category.plural')}:
+             span.total-number= site.categories.length
+  footer(style= footerStyle)
+    if theme.aside.icp !== null
+      nobr
+        span.text-title ICP
+        a(href='https://beian.miit.gov.cn/').text-content= theme.aside.icp
+    if theme.aside.copyright !== null
+      each content, title in theme.aside.copyright
+        nobr
+          span.text-title= title
+          span.text-content= content
+        br
+    <div id="creative-commons" style="margin-top: 64px"><span><a id="creative-commons-img" rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />如无特殊说明，本站<b>所有原创作品</b>均采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可。<br />如转载，请注明原作者为<b>安擎Angine</b>，并附上<b>本页链接。</b></span></div>
+    br
+    span(id="timeDate") 载入运行时长……
+    span(id="times") 
+    span 总计获 
+    span(id="busuanzi_container_site_uv")
+      span(id="busuanzi_value_site_uv")
+      span 人 
+    span(id="busuanzi_container_site_pv")
+      span(id="busuanzi_value_site_pv")
+      span 次访问
+    br
+    br
+    //- nobr #{__('footer.publish')} 
+    nobr 由
+      a(href= 'http://hexo.io') Hexo
+      span 强力驱动
+    wbr
+    nobr  #{__('footer.theme')} 
+      a(href= 'https://github.com/Yue-plus/hexo-theme-arknights') Arknights 
+    wbr
+    nobr #{__('footer.by')} 
+      a(href= 'https://github.com/Yue-plus') Yue_plus
+    br
+    br
+    nobr <span>©2023 Angine</span>

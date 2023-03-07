@@ -6,16 +6,12 @@
   &.open
     transform translateX(0)
 
+@media ( min-width 769px ) and ( max-width 1023px )
+  .up :is(#search-header, .search-popup)
+    left calc(100vw - 238px)
+  :is(.up, .moving) header
+      clip-path polygon(0 0, 0 100%, calc(100vw - 238px) 100%, calc(100vw - 238px) 0)
 
-@media ( min-width 769px )
-  .up .closed .search-popup
-    // right 200px
-    right 0px
-  @media ( max-width 1023px )
-    #search-header
-      padding-left 4.5em
-      
-      
 @media ( min-width 1024px )
   #search-header
     input
@@ -24,20 +20,6 @@
         text-align right
     .navItemTitle
       padding-right 10px
-      &:hover::after
-        border-color #3dc9c2
-      &::after
-        border-left 4px solid #fff
+      &::before
+        border-left 4px solid var(--theme-border-light)
         left 0
-
-@keyframes get-in
-  0%
-    transform translateX(-100%)
-  100%
-    transform translateX(0)
-
-@keyframes get-out
-  0%
-    width 180%
-  100%
-    width 100%

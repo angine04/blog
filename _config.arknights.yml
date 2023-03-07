@@ -1,8 +1,16 @@
 # canvas 动态背景
 canvas_dust: true
 
+# 默认颜色模式 dark / light / auto
+# dark 暗色模式
+# light 亮色模式
+# auto 跟随系统
+color: dark
+
 # <body> 背景图片链接
-background_image: https://s1.ax1x.com/2023/01/21/pSGUgUA.png
+background_image:
+  dark: https://s1.ax1x.com/2023/01/21/pSGUgUA.png  # 暗色模式
+  light: /images/bg2.png # 亮色模式
 
 # 导航栏
 menu:
@@ -10,8 +18,6 @@ menu:
   Archives: archives/
   Portals: portals/
   About: about/
-  # Contact: contact/
-
 
 # 侧边栏
 aside:
@@ -19,7 +25,7 @@ aside:
   logo: https://s1.ax1x.com/2023/01/23/pSJ5OVH.png #图片链接，建议 1:1 比例
   dr: / # 侧边栏 Dr. 链接
   icp: # ICP 备案号，与版权声明相同，但会链接到 https://beian.miit.gov.cn/
-  copyright: 
+  copyright: # 版权声明、备案号等，可自定义键值，不想显示则留空
 
 # post 文章页面配置；true / false
 post:
@@ -47,7 +53,7 @@ archives:
 
 # 搜索
 search:
-  enable: false
+  enable: true
   content: true # 若为 false，仅可搜索标题及 metadata
   preload: all # 自动加载搜索数据
   # 设为 post 时，仅可搜索 post 页面
@@ -63,11 +69,9 @@ search:
 # 详见 https://valine.js.org
 valine:
   enable: false
-  app_id: 9yotNelhEnpJYdOACMzyugxr-MdYXbMMI
-  app_key: NeJdIygEckdSIaFKldiwfeC8
-  server_url: https://9yotnelh.api.lncldglobal.com
-
-  placeholder: By the power of language
+  app_id: # APP ID
+  app_key: # APP KEY
+  server_url: # APP DOMAIN（LeanCloud 国际版）
 
 # gitalk
 # 详见 https://github.com/gitalk/gitalk
@@ -93,17 +97,17 @@ mermaid:
 
 # pjax 支持
 pjax:
-  enable: false
+  enable: true
 
 # 公式前端渲染
 mathjax:
-  enable: true
+  enable: false
   version: '2.6.1'
 
 # 在 `<head>` 标签内引入 CSS 样式表
 stylesheets:
   - //unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css # 代码高亮样式
-
 # 在 `<body>` 尾部引入 JavaScript 脚本
 scripts:
-
+  - /scripts/about.js
+  - /scripts/since.js
