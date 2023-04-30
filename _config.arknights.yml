@@ -9,7 +9,7 @@ color: dark
 
 # <body> 背景图片链接
 background_image:
-  dark: https://s1.ax1x.com/2023/01/21/pSGUgUA.png  # 暗色模式
+  dark: https://s1.ax1x.com/2023/04/30/p9362tK.png  # 暗色模式
   light: /images/bg2.png # 亮色模式
 
 # 导航栏
