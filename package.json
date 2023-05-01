@@ -9,14 +9,15 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.0.0-rc1"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "grunt": "^1.6.1",
     "grunt-rewrite": "^1.0.1",
-    "hexo": "^6.3.0",
+    "hexo": "7.0.0-rc1",
     "hexo-browsersync": "^0.3.0",
+    "hexo-cli": "^4.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
@@ -31,7 +32,11 @@
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^0.0.3",
+    "hexo-util": "^3.0.1",
     "hexo-wordcount": "^6.0.1",
     "valine": "^1.5.1"
+  },
+  "devDependencies": {
+    "grunt-rewrite": "^1.0.1"
   }
 }
