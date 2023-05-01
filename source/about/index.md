@@ -52,8 +52,8 @@ Website hosted using GitHub Pages.
 本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
 本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
- - 在夸克等浏览器下显示不正确。（Won't fix）
- - Pjax还是有那么一点点小问题。（已禁用pjax）
+ - ~~在夸克等浏览器下显示不正确。（Won't fix）~~现在已经显示正常。（2023.5.1）
+ - ~~Pjax还是有那么一点点小问题。（已禁用pjax）~~Pjax似乎已可以正常工作。已在Edge和Firefox下测试。（2023.5.1）
 
 一言以蔽之：我太菜了。有缘再修吧（
 发现其他bug欢迎提issue或者直接在本页面评论。
