@@ -128,9 +128,9 @@ OpenCV提供了`HoughCircles()`函数用于检测圆形。检测到的圆形会�
 cv::Mat gray;
 cvtColor(frame, gray, cv::COLOR_BGR2GRAY); // 转化为灰度图
 std::vector<cv::Vec3f> circles; // 该vector存放检测到的圆
-auto minDist = 100;
-auto param1 = 70;
-auto param2 = 0.8;
+double minDist = 100;
+double param1 = 70;
+double param2 = 0.8;
 int minRadius = 25;
 int maxRadius = 300;
 HoughCircles(gray, circles, cv::HOUGH_GRADIENT_ALT, 1.5, minDist, param1, param2, minRadius, maxRadius);
