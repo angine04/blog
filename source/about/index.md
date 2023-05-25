@@ -22,7 +22,7 @@ published: true
  - ~~又丑又穷的肥宅。~~即便如此也有可能找到对象吗？（有待验证）
  - 看我的logo，你大概知道我是哪家粉丝了吧。（大概吧）<span id="text-secret">好吧，有人以为是Google Play，但其实是微软（</span>
  - 看本站背景，你大概知道我玩什么游戏了吧。（应该吧）<span id="text-secret">Minecraft（即答）</span>
- - 红米K20钉子户。所有挖孔的屏幕都是异端！！
+ - ~~红米K20钉子户。所有挖孔的屏幕都是异端！！~~小米13真香。它真的是那种，很特别的那种（省略若干字
 
 # 联系我
 
@@ -52,8 +52,8 @@ Website hosted using GitHub Pages.
 本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
 本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
- - ~~在夸克等浏览器下显示不正确。（Won't fix）~~现在已经显示正常。（2023.5.1）
- - ~~Pjax还是有那么一点点小问题。（已禁用pjax）~~Pjax似乎已可以正常工作。已在Edge和Firefox下测试。（2023.5.1）
+ - <span id="text-secret">~~在夸克等浏览器下显示不正确。（Won't fix）~~</span>现在已经显示正常。（2023.5.1）
+ - <span id="text-secret">~~Pjax还是有那么一点点小问题。（已禁用pjax）~~</span>Pjax似乎已可以正常工作。已在Edge和Firefox下测试。（2023.5.1）
 
 一言以蔽之：我太菜了。有缘再修吧（
 发现其他bug欢迎提issue或者直接在本页面评论。
@@ -72,3 +72,5 @@ Website hosted using GitHub Pages.
 **2023年1月21日**   陆续进行了大量对主题的魔改和插件的安装。人生第一次被Merge。（感谢主题作者[Yue_Plus](https://github.com/Yue-plus)。）
 
 **2023年3月6日**    开始记录大事记。本博客添加了第一条友链。
+
+**2023年5月35日**   发表了第一篇[技术相关文章](/posts/0e61189074adddd0/)
