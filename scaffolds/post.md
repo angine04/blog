@@ -6,6 +6,6 @@ tags:
  - TAG2
 post-index: true
 categories: CATEGORY
-linkhash: @@linkhash
+linkhash: '@@linkhash'
 excerpt: excerpt
 ---
