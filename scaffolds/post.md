@@ -7,5 +7,4 @@ tags:
 post-index: true
 categories: CATEGORY
 linkhash: '@@linkhash'
-excerpt: excerpt
 ---

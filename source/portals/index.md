@@ -9,5 +9,8 @@ date: 2023-01-22 02:49:10
 # <img src="https://s1.lozumi.com/logo/icon.png" style="height:1.75em; width:1.75em; margin-right: 6px" /> [洛衣博客](https://www.lozumi.com)
 不负时光，幸甚相逢
 
-# <img src="kikomas.art.png" style="height:1.75em; width:1.75em; margin-right: 6px" /> [kikomas.art](https://kikomas.art)
+# <img src="/images/portals/kikomas.art.png" style="height:1.75em; width:1.75em; margin-right: 6px" /> [kikomas.art](https://kikomas.art)
 kikomas的个人作品站 - 我来自星辰之间
+
+# [KirCute](https://kircute.jimmytoluene.com/)
+卡比三卖萌KirCute的博客
