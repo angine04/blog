@@ -1,6 +1,15 @@
 
+@font-face {
+    font-family: Fira Code;
+    src: url(/font/FiraCode.ttf);
+}
+
+@font-face {
+    font-family: Noto Sans;
+    src: url(/font/NotoSans.ttf);
+}
+
 body
-    background linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(https://s1.ax1x.com/2023/01/21/pSGUgUA.png) !important
     background-position center bottom !important
     background-size cover !important
 
@@ -38,11 +47,7 @@ input::-webkit-input-placeholder{
 .footer-link
     border-color #3dc9c2 !important
 
-.recent-post
-    border-color #ccc
 
-.recent-post time
-    color #ccc
 
 @media (max-width 768px)
     #logo img
@@ -57,10 +62,10 @@ blockquote
     margin 24px 16px
 
 #post-content p
-    padding 0 18px
+    padding 0 8px
     text-align justify
 
-del
+deleeeeeeeeeeeeeeee
     color #666
 
 :root {
@@ -186,4 +191,43 @@ darkmode-selector {
 
 #text-secret:hover, #text-secret:active{
     color: #333;
+}
+
+aside footer, article{
+    font-family: 'Fira Code', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' !important;
+}
+
+.recent-post
+    border-color #ccc
+
+.recent-post time
+    color #ccc
+
+// [theme-mode=light] .footer-link a:not(:hover),
+// [theme-mode=light] aside footer {
+//   text-shadow: none !important;
+//   color: #fff;
+// }
+
+// [theme-mode=light] .recent-post
+//     border-color #333
+
+// [theme-mode=light] .recent-post time
+//     color #333
+
+// [theme-mode=light] .navItemTitle {
+//   text-shadow: 0 0 15px #fdf3a8, 0 0 15px #fdf3a8, 0 0 15px #fdf3a8, 0 0 15px #fdf3a8;
+// }
+
+// [theme-mode=light] .navItemTitle,
+// [theme-mode=light] aside footer {
+//   font-weight: normal;
+// }
+
+// .js-Pjax-remove{
+//     display: none !important;    
+// }
+
+#color-mode{
+    display:none;
 }

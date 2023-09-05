@@ -21,7 +21,6 @@ if page.posts.length > 0
             time(datetime=post.date.toJSON())= date(post.date, date_format)
         h1.recent-title= post.title
         .recent-excerpt
-          if post.excerpt.length > 0
-            hr
+          if post.excerpt.length > 0 
             != post.excerpt
         span.read-more #{__('page.readMore')}

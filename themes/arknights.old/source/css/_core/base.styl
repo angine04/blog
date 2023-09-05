@@ -1,11 +1,6 @@
 // ========= 基础样式
 // ====== base style
 
-@font-face {
-  font-family: 'Noto Sans Regular';
-  src: url(/font/NotoSans.ttf);
-}
-
 html, body, label
   cursor var(--cursor-data) 3 3, default
 
@@ -105,7 +100,7 @@ time
   font-family BenderLight
 
 code, pre
-  font-family "Fira Code"
+  font-family "JetBrains Mono"
 code
   margin 0!important
   background-color var(--theme-bg-soft-hover)
@@ -121,12 +116,12 @@ kbd
   margin 0 2px
   border-radius 2px
   padding 0 3px
-  font-family "Fira Code"
+  font-family "JetBrains Mono"
 
 em
   font-family Times, "Times New Roman", 'FangSong', 'SimSun', serif
 strong em, em strong
-  font-family 'Microsoft YaHei', '\5b8b\4f53', sans-serif
+  font-family "JetBrains Mono", 'Microsoft YaHei', '\5b8b\4f53', sans-serif
 :not(a)>:is(strong, em)
   color var(--theme-light)
 :not(a)>:is(strong em, em strong)
@@ -172,4 +167,4 @@ a, button, input, textarea
 input
   cursor var(--cursor) 3 3, text
   user-select none
-  font-family 'Microsoft YaHei', '\5b8b\4f53', sans-serif
+  font-family "JetBrains Mono", 'Microsoft YaHei', '\5b8b\4f53', sans-serif
