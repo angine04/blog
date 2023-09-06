@@ -6,12 +6,12 @@ date: 2023-01-22 02:49:10
 如需申请友链，请提供网站名称、网址、描述、网站图标（长宽1:1，建议至少128*128）。
 可以直接在下方评论区回复，或邮件联系[me@angine.tech](mailto:me@angine.tech)。
 
-# <img src="https://s1.lozumi.com/logo/icon.png" style="height:1.75em; width:1.75em; margin-right: 6px" /> [洛衣博客](https://www.lozumi.com)
+# <!--<img src="https://s1.lozumi.com/logo/icon.png" style="height:1.75em; width:1.75em; margin-right: 6px" />--> [洛衣博客](https://www.lozumi.com)
  > 不负时光，幸甚相逢
 
 nico同学，我校数院同届的大佬，多才且自律。难以望其项背！
 
-# <img src="/images/portals/kikomas.art.png" style="height:1.75em; width:1.75em; margin-right: 6px" /> [kikomas.art](https://kikomas.art)
+# <!--<img src="/images/portals/kikomas.art.png" style="height:1.75em; width:1.75em; margin-right: 6px" />--> [kikomas.art](https://kikomas.art)
  > kikomas的个人作品站 - 我来自星辰之间
 
 Kikomas老师，认识了大约有5年了吧。造语艺术的巨佬，难以望其项背！
