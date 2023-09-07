@@ -7,7 +7,7 @@ tags:
   - rEFInd
 post-index: true
 categories: Dev
-linkhash: '@@linkhash2'
+linkhash: '@@linkhash3'
 date: 2023-05-27 02:24:49
 ---
 
