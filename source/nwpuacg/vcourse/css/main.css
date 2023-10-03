@@ -29,7 +29,7 @@ img {
 p {
 	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	color : Black;
-	margin-left :40px;
+	margin: 8px 0;
 }
 
 ul,ol{
@@ -37,7 +37,7 @@ ul,ol{
 	color : Black;
 }
 
-.question-content{
+.text-block{
 	margin-left :40px;
 }
 
@@ -64,7 +64,7 @@ h2
 	font-size : larger;
 	font-weight : bold;
 	color : White;
-	padding : 8px;
+	padding : 12px 36px;
 	background : #336699;
 	border : 1px solid White;
 	margin-top : 30px;
@@ -85,4 +85,15 @@ th {
 
 td {
 	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+}
+
+#logo{
+	margin: 12px;
+	width: 128px;
+}
+
+footer{
+	width: 100%;
+	margin: 48px 0;
+	text-align: center;
 }
