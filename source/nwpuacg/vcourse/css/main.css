@@ -1,5 +1,5 @@
 body {
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	font-size: large;
 	background-color: White;	
 	padding: 0;
@@ -27,13 +27,13 @@ img {
 
 
 p {
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	color : Black;
 	margin: 8px 0;
 }
 
 ul,ol{
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	color : Black;
 }
 
@@ -43,7 +43,7 @@ ul,ol{
 
 h1
 {
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	font-size : x-large;
 	font-weight : bold;
 	color : Black;
@@ -60,7 +60,7 @@ h1
 
 h2
 {
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	font-size : larger;
 	font-weight : bold;
 	color : White;
@@ -72,19 +72,19 @@ h2
 
 h3,h4,h5,h6
 {
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	color : Black;
 	margin-left : 60px;
 }
 
 
 th {
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	background-color : #CCCCFF;
 }
 
 td {
-	font-family : "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 }
 
 #logo{
