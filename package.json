@@ -9,7 +9,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.0.0-rc1"
+    "version": "7.0.0-rc2"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -17,7 +17,7 @@
     "grunt-rewrite": "^1.0.1",
     "hexo": "7.0.0-rc2",
     "hexo-browsersync": "^0.3.0",
-    "hexo-cli": "^4.3.0",
+    "hexo-cli": "^4.3.1",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
