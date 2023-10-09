@@ -10,6 +10,7 @@
 }
 
 body
+    font-family 'Fira Code','Jetbrains Mono','Noto Sans','Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
     background-position center bottom !important
     background-size cover !important
 
@@ -65,7 +66,7 @@ blockquote
     padding 0 8px
     text-align justify
 
-deleeeeeeeeeeeeeeee
+del
     color #666
 
 :root {
@@ -168,7 +169,20 @@ darkmode-selector {
         display: flex;
         text-align: justify
     }
+    .recent-post{
+    
+    padding: 24px 36px;
 }
+
+
+
+}
+
+
+    .recent-post{
+    margin-bottom: 0;
+    border: #cccccc 0;
+    background: rgba(black,0.2);}
 
 
 @media (max-width 769px){
@@ -197,12 +211,13 @@ aside footer, article{
     font-family: 'Fira Code', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' !important;
 }
 
-.recent-post
-    border-color #ccc
-    background: none
+
 
 .recent-post time
     color #ccc
+
+
+
 
 #total
     background: none
@@ -242,4 +257,9 @@ aside footer, article{
 
 .recent-post .categories, .recent-post .tags {
     font-family: 'Bender', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' , 'sans-serif';
+}
+
+#search-input::placeholder{
+    color:#fff;
+    font-family: 'Bender', 'Jetbrains Mono', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' , 'sans-serif';
 }
