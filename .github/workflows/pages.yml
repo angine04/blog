@@ -25,6 +25,8 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Grunt
+        run: grunt rewrite
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
