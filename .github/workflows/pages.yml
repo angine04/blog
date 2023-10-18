@@ -23,12 +23,16 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
-      - name: Grunt
+      - name: Grunt Rewrite
         run: grunt rewrite
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./public
