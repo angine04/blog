@@ -7,7 +7,7 @@ tags:
  - 闲谈
 post-index: true
 categories: Nonsense
-linkhash: @@linkhash
+linkhash: 4081
 ---
 现在是19号凌晨。
 之前一方面忙，另一方面又懒。将近二十天过去了，才磨磨蹭蹭地弄好。
