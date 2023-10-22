@@ -6,7 +6,7 @@ tags:
  - 教程
 post-index: true
 categories: Dev
-linkhash: '@@linkhash2'
+linkhash: '@@linkhash'
 ---
 # 前言
 
