@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             hash.update(contents);
             var hashValue = hash.digest('hex');
   
-            return contents.replace(/@@linkhash/g, hashValue.substring(0, 16));
+            return contents.replace(/@@linkhash/g, hashValue.substring(0, 4));
           }
         },
       },
