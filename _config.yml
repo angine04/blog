@@ -70,6 +70,16 @@ index_generator:
   per_page: 6
   order_by: -date
 
+#archive分页每页显示文章数
+archive_generator:
+    per_page: 12
+#tag分页每页显示文章数
+tag_generator:
+    per_page: 12
+#category分页每页显示文章数
+category_generator: 
+    per_page: 12
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -90,8 +100,8 @@ updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 8
-pagination_dir: page
+# per_page: 8
+# pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
