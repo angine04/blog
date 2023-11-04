@@ -67,18 +67,18 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 6
+  per_page: 8
   order_by: -date
 
 #archive分页每页显示文章数
 archive_generator:
-    per_page: 12
+    per_page: 20
 #tag分页每页显示文章数
 tag_generator:
-    per_page: 12
+    per_page: 20
 #category分页每页显示文章数
 category_generator: 
-    per_page: 12
+    per_page: 20
 
 # Category & Tag
 default_category: uncategorized
