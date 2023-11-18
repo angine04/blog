@@ -23,6 +23,8 @@ hr{
 
 img {
 	border : 0px none;
+	max-width: 100%;
+	object-fit: contain;
 }
 
 
@@ -39,6 +41,7 @@ ul,ol{
 
 .text-block{
 	margin-left :40px;
+	position: relative;
 }
 
 h1
@@ -86,6 +89,13 @@ th {
 td {
 	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 }
+
+@media (min-width: 1291px) {
+	img {
+	  max-width: 70%;
+	  height: fit-content;
+	}
+  }
 
 #logo{
 	margin: 12px;
