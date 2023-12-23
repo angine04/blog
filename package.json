@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "grunt": "~0.4.0",
-    "grunt-rewrite": "^1.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
     "hexo": "7.0.0",
     "hexo-browsersync": "^0.3.0",
     "hexo-cli": "^4.3.1",
@@ -36,9 +36,14 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-util": "^3.0.1",
     "hexo-wordcount": "^6.0.1",
+    "html-minifier": "^4.0.0",
+    "readable-stream": "^4.5.1",
     "valine": "^1.5.1"
   },
   "devDependencies": {
-    "grunt-rewrite": "^1.0.1"
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-replace": "^1.1.4",
+    "gulp-uglify": "^3.0.2"
   }
 }
