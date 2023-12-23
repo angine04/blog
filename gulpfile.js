@@ -1,20 +1,31 @@
 const gulp = require('gulp');
-const replace = require('gulp-replace');
 const htmlmin = require('gulp-htmlmin');
 const cssmin = require('gulp-clean-css');
+const through = require('through2');
+const crypto = require('crypto');
 const uglify = require('gulp-uglify');
 const pipeline = require('readable-stream').pipeline;
-const imagemin = require('gulp-imagemin');
 
 gulp.task('gen-link', function(){
-    const crypto = require('crypto');
-    const hash = crypto.createHash('sha256');
-    hash.update(contents);
-    var hashValue = hash.digest('hex').substring(0,4);
-    return gulp.src('./source/_posts/**/*.md')
-        .pipe(replace(/@@linkhash/g, hashValue))
-        .pipe(gulp.dest('source/_posts'));
-  });
+    return gulp.src('source/_posts/**/*.md')
+        .pipe(through.obj(function (file, encode, cb) {
+                const contentsString = file.contents.toString();
+                const regex = /@@linkhash/g;
+                if(regex.test(contentsString)){
+                    time = new Date().toLocaleTimeString('it-IT');
+                    console.log("[" + time + "] Found @@linkhash at " + file.relative);
+                    const hash = crypto.createHash('sha256');
+                    hash.update(file.contents);
+                    let hashValue = hash.digest('hex').substring(0,4);
+                    console.log("[" + time + "] Hash generated: " + hashValue);
+                    let result = contentsString.replace(regex, hashValue);
+                    file.contents = new Buffer.from(result, encode);
+                }
+                this.push(file);
+                cb();
+            }))
+            .pipe(gulp.dest('source/_posts'));
+    });
 
 gulp.task('minify-html', function () {
     return gulp.src('./public/**/*.html')
@@ -46,18 +57,19 @@ gulp.task('minify-js', function (cb) {
     );
   });
 
-gulp.task("minify-images", function () {
-    return gulp
-        .src("./public/**/*.{jpg,png,svg,gif}")
-        .pipe(
-            imagemin()
-        )
-      .pipe(gulp.dest("./public"));
-  });
+// gulp.task("minify-images", function () {
+//     return gulp
+//         .src("./public/**/*.{jpg,png,svg,gif}")
+//         .pipe(
+//             imagemin()
+//         )
+//       .pipe(gulp.dest("./public"));
+//   });
 
 gulp.task(
     "minify",
     gulp.series(
-        gulp.parallel("minify-html", "minify-css", "minify-js", "minify-images")
+        gulp.parallel("minify-html", "minify-css", "minify-js"/*, "minify-images"*/)
     )
 );
+
