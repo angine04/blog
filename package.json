@@ -38,7 +38,7 @@
     "hexo-util": "^3.0.1",
     "hexo-wordcount": "^6.0.1",
     "html-minifier": "^4.0.0",
-    "readable-stream": "^4.5.1",
+    "readable-stream": "^4.5.2",
     "through2": "^4.0.2",
     "valine": "^1.5.1"
   },
