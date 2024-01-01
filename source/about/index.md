@@ -44,8 +44,8 @@ Slogan: By the power of language. | 以语言之力。
 
 会记录一些涉及到技术、语言学、文艺、生活琐事、莫名其妙的感受与思考……一类的内容。
 
-Powered by [Hexo](https://hexo.io/). Theme [Arknights](https://github.com/Yue-plus/hexo-theme-arknights) designed by [Yue_Plus](https://github.com/Yue-plus) and modified by me.
-Website hosted using GitHub Pages.
+本站由[Hexo](https://hexo.io/)强力驱动。主题[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)由[Yue_Plus](https://github.com/Yue-plus)开发。我对其进行了部分修改，以适应本站需要。本站使用GitHub Pages。
+
 本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
 本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
@@ -57,6 +57,15 @@ Website hosted using GitHub Pages.
 
 本站背景摄于瓜大Minecraft生存服五周目·阳澄湖底。大桥是天船运河公司·阳澄湖线铁路桥。
 白色主题背景是随便找的。有点晃眼，以后换。(当前已禁用白色主题。)
+
+## 许可协议
+
+除非在文章中另有说明，否则本站所有内容均采用[知识共享署名 4.0 国际](http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1)许可协议进行共享。
+
+这意味着：
+
+ - 您可以使用，改编，转载这些内容，不论出于商业或非商业的目的。
+ - 但是，您必须注明**原作者**为**安擎Angine**，附上**原文的链接**和**原文所采用的许可协议**，并且说明**您是否对原文作了任何形式的改编**。
 
 ## 时间线
 
@@ -73,3 +82,4 @@ Website hosted using GitHub Pages.
 **2023年5月21日**   发表了第一篇[技术相关文章](/posts/4729/)。
 
 **2023年9月6日**   升级了主题的版本。当前的版本是一个稳定的版本，在相当长的时间内应该不会再升级了。
+
