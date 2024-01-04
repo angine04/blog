@@ -1,10 +1,10 @@
 body {
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 	font-size: large;
-	background-color: White;	
+	background-color: White;
 	padding: 0;
 	margin: 0;
-} 
+}
 
 a {
 	color: #666699;
@@ -15,95 +15,110 @@ a:hover {
 	text-decoration: underline
 }
 
-hr{
+hr {
 	height: 1px;
-	margin-left : 40px;
+	margin-left: 40px;
 
 }
 
 img {
-	border : 0px none;
+	border: 0px none;
 	max-width: 100%;
 	object-fit: contain;
 }
 
 
 p {
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
-	color : Black;
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	color: Black;
 	margin: 8px 0;
 }
 
-ul,ol{
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
-	color : Black;
+ul,
+ol {
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	color: Black;
 }
 
-.text-block{
-	margin-left :40px;
+.text-block {
+	margin-left: 40px;
 	position: relative;
 }
 
-h1
-{
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
-	font-size : x-large;
-	font-weight : bold;
-	color : Black;
-	text-align : center;
-	width : 100%;
-	border-top-width : 1px;
-	border-bottom-width : 1px;
-	border : 1px solid Black;
-	border-left-width : 0px;
-	border-right-width : 0px;
-	padding : 10px 0;
+h1 {
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-size: x-large;
+	font-weight: bold;
+	color: Black;
+	text-align: center;
+	width: 100%;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border: 1px solid Black;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	padding: 10px 0;
 
 }
 
-h2
-{
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
-	font-size : larger;
-	font-weight : bold;
-	color : White;
-	padding : 12px 36px;
-	background : #336699;
-	border : 1px solid White;
-	margin-top : 30px;
+h2 {
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-size: larger;
+	font-weight: bold;
+	color: White;
+	padding: 12px 36px;
+	background: #336699;
+	border: 1px solid White;
+	margin-top: 30px;
 }
 
-h3,h4,h5,h6
-{
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
-	color : Black;
-	margin-left : 60px;
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	color: Black;
+	margin-left: 60px;
 }
 
 
 th {
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
-	background-color : #CCCCFF;
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	background-color: #CCCCFF;
 }
 
 td {
-	font-family : "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
+	font-family: "Noto Sans", "Noto Sans SC", "Microsoft Yahei", sans-serif, Verdana, Geneva, Arial, Helvetica;
 }
 
 @media (min-width: 1291px) {
 	img {
-	  max-width: 70%;
-	  height: fit-content;
+		max-width: 70%;
+		height: fit-content;
 	}
-  }
+}
 
-#logo{
+#logo {
 	margin: 12px;
 	width: 128px;
 }
 
-footer{
+footer {
 	width: 100%;
 	margin: 48px 0;
 	text-align: center;
+}
+
+@media (min-width: 1280px) {
+	body {
+		width: 60%;
+		margin-left: 20%;
+	}
+}
+
+@media (min-width: 1960px) {
+	body {
+		width: 50%;
+		margin-left: 25%;
+	}
 }
