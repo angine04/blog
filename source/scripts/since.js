@@ -1,13 +1,4 @@
-function getUrlRelativePath() {
-    let url = document.location.toString();
-    let arrUrl = url.split("//");
-    let start = arrUrl[1].indexOf("/");
-    let relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
-    if (relUrl.indexOf("?") != -1) {
-        relUrl = relUrl.split("?")[0];
-    }
-    return relUrl;
-}
+
 
 let now = new Date();
 function createtime() {
@@ -32,8 +23,9 @@ function createtime() {
     }
     document.getElementById("timeDate").innerHTML = "本站已在线运行<br />" + dnum + "天 ";
     document.getElementById("times").innerHTML = hnum + "小时 " + mnum + "分 " + snum + "秒<br/>";
-    let location = getUrlRelativePath();
-    if(location == "/about/"){
+    let location = document.location.toString();
+    let urlPattern = /about/g;
+    if(urlPattern.test(location)){
         document.getElementById("aboutTimeDate").innerHTML = dnum + "天 ";
         document.getElementById("aboutTimes").innerHTML = hnum + "小时 " + mnum + "分 " + snum + "秒";
     }
