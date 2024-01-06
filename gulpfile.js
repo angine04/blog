@@ -4,32 +4,33 @@ const cssmin = require('gulp-clean-css');
 const through = require('through2');
 const crypto = require('crypto');
 const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
 const pipeline = require('readable-stream').pipeline;
 
-gulp.task('gen-link', function(){
+gulp.task('gen-link', function () {
     return gulp.src('source/_posts/**/*.md')
         .pipe(through.obj(function (file, encode, cb) {
-                const contentsString = file.contents.toString();
-                const regex = /@@linkhash/g;
-                if(regex.test(contentsString)){
-                    time = new Date().toLocaleTimeString('it-IT');
-                    console.log("[" + time + "] Found @@linkhash at " + file.relative);
-                    const hash = crypto.createHash('sha256');
-                    hash.update(file.contents);
-                    let hashValue = hash.digest('hex').substring(0,4);
-                    console.log("[" + time + "] Hash generated: " + hashValue);
-                    let result = contentsString.replace(regex, hashValue);
-                    file.contents = new Buffer.from(result, encode);
-                }
-                this.push(file);
-                cb();
-            }))
-            .pipe(gulp.dest('source/_posts'));
-    });
+            const contentsString = file.contents.toString();
+            const regex = /@@linkhash/g;
+            if (regex.test(contentsString)) {
+                time = new Date().toLocaleTimeString('it-IT');
+                console.log("[" + time + "] Found @@linkhash at " + file.relative);
+                const hash = crypto.createHash('sha256');
+                hash.update(file.contents);
+                let hashValue = hash.digest('hex').substring(0, 4);
+                console.log("[" + time + "] Hash generated: " + hashValue);
+                let result = contentsString.replace(regex, hashValue);
+                file.contents = new Buffer.from(result, encode);
+            }
+            this.push(file);
+            cb();
+        }))
+        .pipe(gulp.dest('source/_posts'));
+});
 
 gulp.task('minify-html', function () {
     return gulp.src('./public/**/*.html')
-        .pipe(htmlmin({ 
+        .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: false,
             collapseBooleanAttributes: true,  //省略布尔属性的值 <input checked="true"/> ==> <input checked />
@@ -38,9 +39,9 @@ gulp.task('minify-html', function () {
             removeStyleLinkTypeAttributes: true,  //删除<style>和<link>的type="text/css"
             minifyJS: true,  //压缩页面JS
             minifyCSS: true  //压缩页面CSS
-            }))
+        }))
         .pipe(gulp.dest('./public'));
-  });
+});
 
 gulp.task('minify-css', function () {
     return gulp.src('./public/**/*.css')
@@ -50,12 +51,12 @@ gulp.task('minify-css', function () {
 
 gulp.task('minify-js', function (cb) {
     return pipeline(
-          gulp.src('./public/**/*.js'),
-          uglify(),
-          gulp.dest('./public/'),
-          cb
+        gulp.src('./public/**/*.js'),
+        uglify(),
+        gulp.dest('./public/'),
+        cb
     );
-  });
+});
 
 // gulp.task("minify-images", function () {
 //     return gulp
