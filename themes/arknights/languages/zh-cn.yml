@@ -42,8 +42,8 @@ menu:
   total: 总数
 
 search:
-  activeHolder: 在这里输入
-  blurHolder: 搜索本博客
+  activeHolder: Type here
+  blurHolder: Search
   noResult: 空空如也
 
 footer:
