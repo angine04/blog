@@ -106,7 +106,7 @@ mathjax:
 
 # 在 `<head>` 标签内引入 CSS 样式表
 stylesheets:
-  - //unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css # 代码高亮样式
+  - https://s4.zstatic.net/npm/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css # 代码高亮样式
 # 在 `<body>` 尾部引入 JavaScript 脚本
 scripts:
   - /scripts/about.js

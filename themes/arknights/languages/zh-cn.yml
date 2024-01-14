@@ -8,9 +8,9 @@ page:
   sticky: 置顶
 
 post:
-  posted: "文章发布时间: "
-  edited: "最后更新时间: "
-  countTotal: "文章总字数: "
+  posted: "发布时间: "
+  edited: "最后更新: "
+  countTotal: "总字数: "
   timeTotal: "预计阅读时间: "
   timeUnit: 分钟
   index: 目录
@@ -42,8 +42,8 @@ menu:
   total: 总数
 
 search:
-  activeHolder: Type here
-  blurHolder: Search the blog
+  activeHolder: 在这里输入
+  blurHolder: 搜索本博客
   noResult: 空空如也
 
 footer:
