@@ -5,7 +5,7 @@ tags:
   - rEFInd
 post-index: true
 categories: Dev
-linkhash: '@@linkhash'
+linkhash: 'fb54'
 date: 2023-05-27 02:24:49
 ---
 
