@@ -54,9 +54,9 @@ shim使用下列密钥验证启动镜像：
 shimx64.efi默认加载同目录下的grubx64.efi。
 
 对于Ubuntu来说，启动过程大约是这样的：
-
+<!-- htmlmin:ignore -->
 <div class="mermaid">
-  flowchart TD
+flowchart TD
    A["UEFI启动"] -->|"验证第一顺位引导程序（假设为Shim）"| B{"验证程序签名"}
    B -->|"签名验证成功（签名来自微软，密钥与db匹配）"| C("加载Shim")
    B -->|"签名验证失败"| D("拒绝加载Shim")
@@ -70,5 +70,5 @@ shimx64.efi默认加载同目录下的grubx64.efi。
    H -->|"签名验证成功（签名来自Canonical，密钥与MOK匹配）"| I("加载内核")
    H -->|"签名验证失败"| K("拒绝加载内核")
 </div>
-
+<!-- htmlmin:ignore -->
 那么，要为rEFInd启用安全启动就很简单了。rEFInd二进制是由作者Rod Smith进行签名的，你可以直接将它的密钥导入MOK。或者，也可以用你自己的密钥进行签名。
