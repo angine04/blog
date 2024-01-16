@@ -1,5 +1,5 @@
 ---
-title: 【OpenCV入门实践】C++实现单目测距
+title: OpenCV入门实践：C++实现单目测距
 tags:
   - 教程
   - OpenCV
