@@ -44,7 +44,7 @@ date: 某年-某月-某日 某时:某分:某秒
 
 为了实现脚本自动计算文章的hash并替换`@@hash`，我们需要一个自动化构建工具。我选用的是gulp，此外还需要用到through2模块，可以用以下的命令安装。
 
-```bash
+```shell
 npm install gulp through2
 ```
 
@@ -78,7 +78,7 @@ gulp.task('gen-link', function () {
 
 然后，在命令行调用即可。
 
-```bash
+```shell
 gulp gen-link
 ```
 
