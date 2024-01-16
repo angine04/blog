@@ -71,4 +71,4 @@ flowchart TD
    H -->|"签名验证失败"| K("拒绝加载内核")
 </div>
 <!-- htmlmin:ignore -->
-那么，要为rEFInd启用安全启动就很简单了。rEFInd二进制是由作者Rod Smith进行签名的，你可以直接将它的密钥导入MOK。或者，也可以用你自己的密钥进行签名。
+那么，要为rEFInd启用安全启动就很简单了。rEFInd二进制是由作者Rod Smith进行签名的，你可以直接将他的密钥导入MOK。或者，也可以用你自己的密钥进行签名。
