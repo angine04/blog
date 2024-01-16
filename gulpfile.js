@@ -15,11 +15,9 @@ gulp.task('gen-link', function () {
             if (regex.test(contentsString)) {
                 time = new Date().toLocaleTimeString('it-IT');
                 console.log("[" + time + "] Found @@linkhash at " + file.relative);
-                const hash = crypto.createHash('sha256');
-                hash.update(file.contents);
-                let hashValue = hash.digest('hex').substring(0, 4);
-                console.log("[" + time + "] Hash generated: " + hashValue);
-                let result = contentsString.replace(regex, hashValue);
+                const hash = crypto.createHash('sha256').update(file.contents).digest('hex').substring(0, 4);
+                console.log("[" + time + "] Hash generated: " + hash);
+                let result = contentsString.replace(regex, hash);
                 file.contents = new Buffer.from(result, encode);
             }
             this.push(file);
