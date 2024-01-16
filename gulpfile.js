@@ -10,9 +10,9 @@ const pipeline = require('readable-stream').pipeline;
 gulp.task('gen-link', function () {
     return gulp.src('source/_posts/**/*.md')
         .pipe(through.obj(function (file, encode, cb) {
-            const contentsString = file.contents.toString();
+            const contents = file.contents.toString();
             const regex = /@@linkhash/g;
-            if (regex.test(contentsString)) {
+            if (regex.test(contents)) {
                 time = new Date().toLocaleTimeString('it-IT');
                 console.log("[" + time + "] Found @@linkhash at " + file.relative);
                 const hash = crypto.createHash('sha256').update(file.contents).digest('hex').substring(0, 4);

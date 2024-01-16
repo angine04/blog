@@ -58,15 +58,14 @@ gulp.task('gen-link', function () {
   return 
   gulp.src('source/_posts/**/*.md') // 遍历md文件
     .pipe(through.obj(function (file, encode, cb) { // 利用through2读写文件内容
-        // 正则表达式匹配需要替换的字符串
-        const contentsString = file.contents.toString();
+        // 使用正则表达式匹配需要替换的字符串
         const regex = /@@hash/g;
-        // 匹配到目标字符串，进行替换
-        if (regex.test(contentsString)) {
+        let contents = file.contents.toString();
+        if (regex.test(contents)) { // 如匹配到目标字符串
             // 求hash值，用来当做路径。当然hash值本身太长了，只取4位也完全够用了
             const hash = crypto.createHash('sha256').update(file.contents).digest('hex').substring(0, 4);
             // 替换字符串
-            let result = contentsString.replace(regex, hash);
+            let result = contents.replace(regex, hash);
             file.contents = new Buffer.from(result, encode);
         }
         this.push(file);
