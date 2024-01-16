@@ -2,7 +2,7 @@
 
 let now = new Date();
 function createtime() {
-    let grt = new Date("01/01/2023 22:30:00");//此处修改你的建站时间或者网站上线时间             
+    let grt = new Date("01/01/2023 22:29:24");//此处修改你的建站时间或者网站上线时间             
     now.setTime(now.getTime()+250); 
     days = (now - grt) / 1000 / 60 / 60 / 24;
     dnum = Math.floor(days);
