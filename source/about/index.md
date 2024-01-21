@@ -84,3 +84,4 @@ Slogan: By the power of language. | 以语言之力。
 
 **2023年9月6日**   升级了主题的版本。当前的版本是一个稳定的版本，在相当长的时间内应该不会再升级了。
 
+**2024年1月20日**   加入[开往](https://www.travellings.cn/)。
