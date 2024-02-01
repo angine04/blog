@@ -21,7 +21,9 @@ if page.posts.length > 0
             time(datetime=post.date.toJSON())= date(post.date, date_format)
         h1.recent-title
           if post.sticky > 0
-            span.post-sticky #{__('page.sticky')}
+            //- span.post-sticky #{__('page.sticky')}
+            span.post-sticky
+              span.material-icons(style="font-size:18px!important") push_pin
           = post.title
         .recent-excerpt
           if post.excerpt.length > 0

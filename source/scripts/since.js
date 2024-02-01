@@ -2,8 +2,8 @@
 
 let now = new Date();
 function createtime() {
-    let grt = new Date("01/01/2023 22:30:00");//此处修改你的建站时间或者网站上线时间             
-    now.setTime(now.getTime()+250); 
+    let grt = new Date("01/01/2023 22:29:24");//此处修改你的建站时间或者网站上线时间             
+    now.setTime(now.getTime() + 250);
     days = (now - grt) / 1000 / 60 / 60 / 24;
     dnum = Math.floor(days);
     hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
@@ -12,8 +12,8 @@ function createtime() {
         hnum = "0" + hnum;
     }
     minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-    mnum = Math.floor(minutes); 
-    if(String(mnum).length == 1){
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
         mnum = "0" + mnum;
     }
     seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
@@ -21,11 +21,11 @@ function createtime() {
     if (String(snum).length == 1) {
         snum = "0" + snum;
     }
-    document.getElementById("timeDate").innerHTML = "本站已在线运行<br />" + dnum + "天 ";
-    document.getElementById("times").innerHTML = hnum + "小时 " + mnum + "分 " + snum + "秒<br/>";
+    document.getElementById("timeDate").innerHTML = "运行" + dnum + "天 ";
+    document.getElementById("times").innerHTML = hnum + "小时 " + mnum + "分 " + snum + "秒&nbsp;<wbr />";
     let location = document.location.toString();
     let urlPattern = /about/g;
-    if(urlPattern.test(location)){
+    if (urlPattern.test(location)) {
         document.getElementById("aboutTimeDate").innerHTML = dnum + "天 ";
         document.getElementById("aboutTimes").innerHTML = hnum + "小时 " + mnum + "分 " + snum + "秒";
     }

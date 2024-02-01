@@ -1,18 +1,4 @@
 
-@font-face {
-    font-family: Fira Code;
-    src: url(/font/FiraCode.ttf);
-}
-
-@font-face {
-    font-family: Noto Sans;
-    src: url(/font/NotoSans.ttf);
-}
-
-body
-    font-family 'Fira Code','Jetbrains Mono','Noto Sans','Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
-    background-position center bottom !important
-    background-size cover !important
 
 #logo
     margin-top 10px
@@ -222,17 +208,13 @@ darkmode-selector {
     color: #333;
 }
 
-aside footer, article{
-    font-family: 'Fira Code', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' !important;
+aside footer{
+    font-family: 'Fira Code','Noto Sans','Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif' !important;
+    color #aaa !important
 }
-
-
 
 .recent-post time
     color #ccc
-
-
-
 
 #total
     background: none
@@ -276,7 +258,7 @@ aside footer, article{
 
 #search-input::placeholder{
     color:#fff;
-    font-family: 'Bender', 'Jetbrains Mono', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' , 'sans-serif';
+    font-family: 'Bender', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' , 'sans-serif';
 }
 
 @media (min-width 1600px){
@@ -293,9 +275,9 @@ aside footer, article{
     }
 }
 
-.material-icons{
-    font-size: 24px;    
-}
+// .material-icons{
+//     font-size: 24px;    
+// }
 
 .ex-title{
     font-size: 70%    
@@ -303,4 +285,13 @@ aside footer, article{
 
 :root[theme-mode=dark] .mermaid{
     fill: #1f2020;    
+}
+
+aside footer{
+    font-size: 70%;
+    font-weight: normal;
+}
+
+.article-item:nth-last-child(2){
+    margin-bottom: 47px !important
 }

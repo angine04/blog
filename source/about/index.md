@@ -4,7 +4,9 @@ date: 2023-01-22 02:33:30
 published: true
 ---
 
+<!-- htmlmin:ignore -->
 <!-- If you're wandering ABOUT, try the spell openSesame -->
+<!-- htmlmin:ignore -->
 
 # 关于我
 
@@ -44,7 +46,7 @@ Slogan: By the power of language. | 以语言之力。
 
 会记录一些涉及到技术、语言学、文艺、生活琐事、莫名其妙的感受与思考……一类的内容。
 
-本站由[Hexo](https://hexo.io/)强力驱动。主题[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)由[Yue_Plus](https://github.com/Yue-plus)开发。我对其进行了部分修改，以适应本站需要。本站使用GitHub Pages。
+本站由[Hexo](https://hexo.io/)强力驱动。主题由[Yue_Plus](https://github.com/Yue-plus)开发的[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)魔改而来。本站使用GitHub Pages。
 
 本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
@@ -55,8 +57,7 @@ Slogan: By the power of language. | 以语言之力。
 一言以蔽之：我太菜了。有缘再修吧（
 发现其他bug欢迎提issue或者直接在本页面评论。
 
-本站背景摄于瓜大Minecraft生存服五周目·阳澄湖底。大桥是天船运河公司·阳澄湖线铁路桥。
-白色主题背景是随便找的。有点晃眼，以后换。(当前已禁用白色主题。)
+本站背景摄于瓜大Minecraft生存服五周目·阳澄湖底。大桥是轨道交通逍遥线铁路桥。
 
 ## 许可协议
 
@@ -84,3 +85,4 @@ Slogan: By the power of language. | 以语言之力。
 
 **2023年9月6日**   升级了主题的版本。当前的版本是一个稳定的版本，在相当长的时间内应该不会再升级了。
 
+**2024年1月20日**   加入[开往](https://www.travellings.cn/)。

@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Fira Code;
+    src: url(/font/FiraCode.ttf);
+}
+
+// @font-face {
+//     font-family: Noto Sans;
+//     src: url(/font/NotoSans.ttf);
+// }
+
 html, body, label
   cursor var(--cursor-data) 3 3, default
 
@@ -10,10 +20,10 @@ body
   background-image var(--body-background)
   background-color var(--theme-background)
   background-attachment fixed
-  background-position 50% 0
+  background-position center bottom
   background-repeat no-repeat
   background-size cover
-  font-family 'JetBrains Mono', 'Microsoft YaHei', '\5b8b\4f53', sans-serif
+  font-family 'Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
 
 main
   height 100vh
@@ -23,7 +33,7 @@ main
   box-sizing border-box
 
 h1, h2, h3, h4, h5, h6
-  color var(--theme-text-light)
+//  color var(--theme-text-light)
   margin-block-start .33em
   margin-block-end .23em
   padding-top .2em
@@ -57,14 +67,16 @@ a,
 button
   background var(--theme-bg-soft)
   color var(--theme-text-light)
-  font-family 'JetBrains Mono'
+  font-family 'Fira Code'
   border unset
 
 time
   font-family Bender
 
+
+
 code, pre
-  font-family 'JetBrains Mono'
+  font-family 'Fira Code'
 code
   margin 0!important
   background-color var(--theme-bg-soft-hover)
@@ -80,12 +92,8 @@ kbd
   margin 0 2px
   border-radius 2px
   padding 0 3px
-  font-family 'JetBrains Mono'
+  font-family 'Fira Code'
 
-em
-  font-family Times, 'Times New Roman', 'FangSong', 'SimSun', serif
-strong em, em strong
-  font-family 'JetBrains Mono', 'Microsoft YaHei', '\5b8b\4f53', sans-serif
 :not(a) > :is(strong, em)
   color var(--theme-light)
 :not(a) > :is(strong em, em strong)
@@ -137,4 +145,4 @@ a, button, input, textarea
 input
   cursor var(--cursor) 3 3, text
   user-select none
-  font-family 'JetBrains Mono', 'Microsoft YaHei', '\5b8b\4f53', sans-serif
+  font-family 'Fira Code','Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
