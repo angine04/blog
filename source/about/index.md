@@ -42,7 +42,7 @@ published: true
 # 关于本站
 
 Angine's blog. | 安擎的博客。
-Slogan: By the power of language. | 以语言之力。
+Motto: By the power of language. | 以语言之力。
 
 会记录一些涉及到技术、语言学、文艺、生活琐事、莫名其妙的感受与思考……一类的内容。
 
