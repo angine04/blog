@@ -36,27 +36,28 @@ aside
           span.icp-title= title
           span.icp-content= content
         br
-    div(id="creative-commons" style="margin-top: 64px")
+    div(style="margin-top: 64px")
       span(xmlns:cc="http://creativecommons.org/ns#")
         a(href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="padding:0")
-          img(style="height:1rem!important" src="https://cc-vocabulary.netlify.app/license_badges/small/by_sa.svg")
-        br
-        |除非另有说明，本站内容采用
-        a(href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer") 知识共享署名-相同方式共享 4.0 国际许可协议
-        |。如转载，请注明原作者为<b>安擎Angine</b>，并附<b>本页链接</b>。
-    br
-    span
-      a(href="https://www.travellings.cn/go.html" title="开往下一个世界：随机跳转到一个新的网站" style="padding:0")
-        img(src="https://www.travellings.cn/assets/w.png" style="height:1.2rem")
-    wbr
-    span(style="margin-left:4px")
-      a(href="https://notbyai.fyi/" title="Not by AI" style="padding:0")
-        img(src="/images/not-by-ai.svg" style="height:1.2rem;")
-    br
-    br
-    span(id="timeDate") 载入运行时长……
+          img(style="height:1.4rem!important; margin-bottom:-0.1rem" src="/images/cc.svg")
+          img(style="height:1.4rem!important; margin-bottom:-0.1rem" src="/images/by.svg")
+          img(style="height:1.4rem!important; margin-bottom:-0.1rem" src="/images/sa.svg")
+      wbr
+      span(style="margin-left:4px; margin-bottom:0.1rem")
+        a(href="https://www.travellings.cn/go.html" title="开往下一个世界：随机跳转到一个新的网站" style="padding:0")
+          img(src="https://www.travellings.cn/assets/w.png" style="height:1.2rem")
+      wbr
+      span(style="margin-left:4px")
+        a(href="https://notbyai.fyi/" title="Not by AI" style="padding:0")
+          img(src="/images/not-by-ai.svg" style="height:1.2rem;")
+    div
+      span 版权与致谢详见
+        a(href="/about") 关于页
+      |。
+    span(id="timeDate") 运行一年以来
     span(id="times") 
-    span 总计获 
+    br
+    span 共 
     span(id="busuanzi_container_site_uv")
       span(id="busuanzi_value_site_uv") 很多
       span 人 
@@ -64,17 +65,15 @@ aside
       span(id="busuanzi_value_site_pv") 很多
       span 次访问
     br
-    br
-    // nobr #{__('footer.publish')} 
-    nobr 由
+    //- nobr #{__('footer.publish')} 
+    span(style="margin-left:-3px")
       a(href= 'http://hexo.io') Hexo
-      span 强力驱动
     wbr
     nobr  #{__('footer.theme')} 
-      a(href= 'https://github.com/Yue-plus/hexo-theme-arknights') Arknights 
-    wbr
-    nobr  #{__('footer.by')} 
-      a(href= 'https://github.com/Yue-plus') Yue_plus
+      a(href= 'https://github.com/Yue-plus/hexo-theme-arknights') Arknights &nbsp;
+    //- wbr
+    //- nobr  #{__('footer.by')} 
+    //-   a(href= 'https://github.com/Yue-plus') Yue_plus&nbsp;
     br
-    br
-    nobr <span>©2024 Angine</span>
+    nobr
+      span ©2023 Angine

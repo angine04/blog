@@ -47,9 +47,9 @@ search:
   noResult: 空无一物
 
 footer:
-  publish: 本站基于
-  theme: 使用主题
-  by: 主题作者
+  publish: on
+  theme: +
+  by: by
 
 Valine:
   placeHolder: By the power of language.
