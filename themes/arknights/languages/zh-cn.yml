@@ -48,7 +48,7 @@ search:
 
 footer:
   publish: on
-  theme: +
+  theme: 主题
   by: by
 
 Valine:
