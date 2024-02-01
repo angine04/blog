@@ -25,7 +25,8 @@ class canvasDust {
   public color: string = '#fff'
   public width: number = 300
   public height: number = 300
-  private dustQuantity: number = 50
+  // private dustQuantity: number = 50
+  private dustQuantity: number = 30
   public dustArr: Array<dust> = []
   private inStop: boolean = false
 
@@ -90,7 +91,8 @@ class canvasDust {
     const height = window.innerHeight
     this.width = width
     this.height = height
-    this.dustQuantity = Math.floor((width + height) / 38)
+    // this.dustQuantity = Math.floor((width + height) / 38)
+    this.dustQuantity = Math.floor((width + height) / 50)
     canvas.width = width
     canvas.height = height
     this.ctx.shadowColor = 
