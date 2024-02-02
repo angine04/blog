@@ -10,15 +10,15 @@ link(
 
 script var config = !{configs}
 if theme.valine && theme.valine.enable === true
-  script(src='https://s4.zstatic.net/npm/valine/dist/Valine.min.js')
+  script(defer src='https://s4.zstatic.net/npm/valine/dist/Valine.min.js')
 if theme.waline && theme.waline.enable === true
   link(rel="stylesheet", href= url_for('https://s4.zstatic.net/npm/@waline/client@v2/dist/waline.css'))
 if theme.gitalk && theme.gitalk.enable === true
-  script(src=url_for("js/gitalk.js"))
+  script(defer src=url_for("js/gitalk.js"))
 if theme.mermaid && theme.mermaid.enable === true && theme.mermaid.version
-  script(src= "https://s4.zstatic.net/npm/mermaid@" + theme.mermaid.version + "/dist/mermaid.min.js")
+  script(defer src= "https://s4.zstatic.net/npm/mermaid@" + theme.mermaid.version + "/dist/mermaid.min.js")
 if theme.mathjax && theme.mathjax.enable === true
-  script(src="https://s4.zstatic.net/ajax/libs/mathjax/" + theme.mathjax.version + "/MathJax.js")
+  script(defer src="https://s4.zstatic.net/ajax/libs/mathjax/" + theme.mathjax.version + "/MathJax.js")
   script
     |MathJax.Hub.Config({
     |  menuSettings: {
@@ -38,10 +38,10 @@ if theme.mathjax && theme.mathjax.enable === true
     |    displayMath: [["\\[", "\\]"]]
     |  }
     |});
-link(type="text/css" rel="stylesheet" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lightgallery.css")
-link(type="text/css" rel="stylesheet" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lg-zoom.css")
-link(type="text/css" rel="stylesheet" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lg-thumbnail.css")
-link(type="text/css" rel="stylesheet" href="https://s4.zstatic.net/npm/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css")
+link(type="text/css" rel="preload" as="style" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lightgallery.css")
+link(type="text/css" rel="preload" as="style" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lg-zoom.css")
+link(type="text/css" rel="preload" as="style" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lg-thumbnail.css")
+link(type="text/css" rel="preload" as="style" href="https://s4.zstatic.net/npm/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css")
 link(type="text/css" rel="stylesheet" href=url_for('/lib/fontawesome/css/all.min.css'))
 
 link(rel="stylesheet", href=url_for("css/arknights.css"))
