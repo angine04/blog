@@ -46,13 +46,17 @@ Motto: By the power of language. | 以语言之力。
 
 会记录一些涉及到技术、语言学、文艺、生活琐事、莫名其妙的感受与思考……一类的内容。
 
-本站由[Hexo](https://hexo.io/)强力驱动。主题由[Yue_Plus](https://github.com/Yue-plus)开发的[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)魔改而来。本站使用GitHub Pages。
+本站由[Hexo](https://hexo.io/)强力驱动。主题由[Yue_Plus](https://github.com/Yue-plus)开发的[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)魔改而来，我另起了一个名字，叫做**Unterwasser**。
+
+本站使用GitHub Pages。
 
 本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
 本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
  - ~~在夸克等浏览器下显示不正确。（Won't fix）~~ 现在已经显示正常。（2023.5.1）
  - ~~Pjax还是有那么一点点小问题。（已禁用pjax）~~ Pjax似乎已可以正常工作。已在Edge和Firefox下测试。（2023.5.1）
+ - 升级主题之后，公式不知为何不居中了。
+ - 而且，pjax会导致mermaid无法加载，需要刷新。
 
 一言以蔽之：我太菜了。有缘再修吧（
 发现其他bug欢迎提issue或者直接在本页面评论。
