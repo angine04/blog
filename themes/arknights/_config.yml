@@ -93,7 +93,7 @@ busuanzi:
   enable: true
   # sitePV: true # 站点总访问量
   # siteUV: true # 站点访客数
-  pagePV: true # 页面访问量
+  pagePV: false # 页面访问量
 
 # Valine
 # 详见 https://valine.js.org
