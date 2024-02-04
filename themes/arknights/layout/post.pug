@@ -13,7 +13,7 @@ block content
     const tocContent = toc(content, theme.toc)
     const countWord = theme.post.count === true && wordcount !== undefined ? wordcount(content) : null
     const countTime = theme.post.time === true && min2read !== undefined ? min2read(content) : null
-    const busuanzi = theme.busuanzi.enable
+    const busuanzi = theme.busuanzi.pagePV
   #post-bg
     #post-title
       h1= page.title
