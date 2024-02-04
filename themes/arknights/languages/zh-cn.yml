@@ -7,6 +7,12 @@ page:
   noCategory: 无分类
   sticky: 置顶
 
+busuanzi:
+  loading: "加载中..."
+  siteView: "总访问量："
+  siteVisitor: "访客数："
+  pageView: "页面浏览: "
+
 post:
   posted: "发布时间: "
   edited: "最后更新: "
@@ -19,8 +25,12 @@ post:
   next: ← 下一篇
   prev: 上一篇 →
 
+encrypt:
+  confirm: 确认
+
 code:
   codeInfo: $0 - $1 行
+  copy: 复制
 
 btn:
   totop: 回到顶部

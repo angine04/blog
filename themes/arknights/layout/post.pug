@@ -9,13 +9,15 @@ block content
     const excerptConf = theme.post.excerpt
     const reward = theme.post.reward
     const encrypted = page.encrypt || page.password
-    const tocContent = encrypted === undefined ? toc(page.content, theme.toc) : toc(page.origin, theme.toc)
-    const countWord = theme.post.count === true && wordcount !== undefined ? wordcount(page.content) : null
-    const countTime = theme.post.time === true && min2read !== undefined ? min2read(page.content) : null
+    const content = encrypted === undefined ? page.content : page.origin
+    const tocContent = toc(content, theme.toc)
+    const countWord = theme.post.count === true && wordcount !== undefined ? wordcount(content) : null
+    const countTime = theme.post.time === true && min2read !== undefined ? min2read(content) : null
+    const busuanzi = theme.busuanzi.enable
   #post-bg
     #post-title
       h1= page.title
-      if (dateConf || updatedConf) && page.published
+      if (dateConf || updatedConf) && page.title
         #post-info
           - var first = true
           if dateConf
@@ -43,6 +45,13 @@ block content
               br
             span #{__('post.timeTotal')}
               div.control #{countTime} #{__('post.timeUnit')}
+            - first = false
+          if busuanzi
+            if !first
+              br
+            span#busuanzi_container_page_pv #{__('busuanzi.pageView')}
+              span#busuanzi_value_page_pv(class='control') #{__('busuanzi.loading')}
+            - first = false
     hr
     #post-content
       if excerptConf || encrypted

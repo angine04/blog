@@ -3,10 +3,10 @@
     src: url(/font/FiraCode.ttf);
 }
 
-// @font-face {
-//     font-family: Noto Sans;
-//     src: url(/font/NotoSans.ttf);
-// }
+@font-face {
+    font-family: Noto Sans;
+    src: url(/font/NotoSans.ttf);
+}
 
 html, body, label
   cursor var(--cursor-data) 3 3, default
@@ -33,7 +33,7 @@ main
   box-sizing border-box
 
 h1, h2, h3, h4, h5, h6
-//  color var(--theme-text-light)
+  //  color var(--theme-text-light)
   margin-block-start .33em
   margin-block-end .23em
   padding-top .2em
@@ -64,6 +64,9 @@ a,
       color var(--theme-text-hover)
       background-color var(--theme-subcolor)
 
+a:has(code)
+  padding unset
+
 button
   background var(--theme-bg-soft)
   color var(--theme-text-light)
@@ -72,8 +75,6 @@ button
 
 time
   font-family Bender
-
-
 
 code, pre
   font-family 'Fira Code'
@@ -110,8 +111,6 @@ blockquote
     padding-right 0
   &:hover
     background-color var(--theme-bg-soft-hover)
-ol
-  overflow auto
 
 li
   margin-block-start .2em

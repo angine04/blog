@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Not Found | Angine's Blog</title>
+  <style>
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: local('JetBrains Mono'), url('font/JetBrainsMono-Regular.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Fira Code';
+      src: local('Fira Code'), url('font/FiraCode.ttf');
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      color: #FFF;
+      background-color: #141516;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(https://s1.ax1x.com/2023/04/30/p9362tK.png );
+    }
+
+    main {
+      text-align: center;
+    }
+
+    #logo {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    #logo img {
+      width: 300px;
+      margin-top: 128px;
+    }
+
+    #error {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    #error a {
+      color: #3dc9c2;
+      padding: 3px 10px;
+      font-size: larger;
+      text-decoration: none;
+    }
+
+    #error a:hover {
+      color: #000;
+      background-color: #3dc9c2;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #FE2;
+      font-family: "Fira Code";
+    }
+
+    h2 {
+      font-size: 32px;
+      font-family: "Fira Code";
+    }
+
+    @media (max-width: 768px) {
+      #logo img {
+        opacity: 0.05;
+        position: fixed;
+        bottom: -12px;
+        left: -5%;
+        width: 70%;
+        pointer-events: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <a id="logo" href="/">
+      <img src="https://s1.ax1x.com/2023/01/23/pSJ5OVH.png" alt="to home" />
+    </a>
+    <br />
+    <div id="error">
+      <h1>404 NOT FOUND</h1>
+      <h2 style="text-align: center;">空无一物</h2>
+      <p style="text-align: center">
+        <a href="/">首页</a>
+        <a onClick="history.back();">上一页</a>
+      </p>
+    </div>
+  </main>
+
+</body>
+
+</html>

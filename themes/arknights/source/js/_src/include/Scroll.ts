@@ -13,7 +13,6 @@ class Scroll {
   private reallyUp: boolean = false
   private intop: boolean = false
   private totop: HTMLElement
-  private lastID: number = -1
 
   public scrolltop = () => {
     getElement('main').scroll({ top: 0, left: 0, behavior: 'smooth' })
@@ -113,13 +112,11 @@ class Scroll {
       this.height = 0
       this.visible = false
       this.totop = getElement('#to-top')
+      this.setListener()
     } catch (e) {}
   }
 
   private checkTouchMove = (event: TouchEvent) => {
-    if (event.changedTouches[0].identifier === this.lastID) {
-      return
-    }
     if (Math.abs(event.changedTouches[0].screenX - this.touchX) > 50 &&
       !this.reallyUp) {
       this.notMoveY = true
@@ -131,9 +128,8 @@ class Scroll {
       document.querySelector('.moving')) {
       return
     }
-    if (getElement('article').getBoundingClientRect().top >= 0) {
+    if (this.intop || getElement('article').getBoundingClientRect().top >= 0) {
       this.reallyUp = true
-      this.lastID = event.changedTouches[0].identifier
       if (event.changedTouches[0].screenY > this.touchY) {
         this.slideUp()
       } else {
@@ -148,9 +144,39 @@ class Scroll {
     this.touchY = event.changedTouches[0].screenY
     this.notMoveY = false
   }
-  private endTouch = (event: TouchEvent) => {
-    if (event.changedTouches[0].identifier === this.lastID) {
-      this.lastID = -1
+
+  private checkPos = () => {
+    if(getElement('article').getBoundingClientRect().top < 0 && this.intop) {
+        this.slideDown()
+    }
+  }
+
+  /**
+   * used for `supScroll` and `footNoteScroll` functions
+   */
+  private setListener = () => {
+    getElement('#post-content').addEventListener('click', this.supScroll)
+    getElement('#footnotes').addEventListener('click', this.footNoteScroll)
+  }
+
+  private supScroll = (event: Event) => {
+    const target = event.target as HTMLAnchorElement
+    const targetParent = getParent(target)
+
+    if (targetParent?.tagName === 'SUP') {
+      event.preventDefault()
+      const hash = target.href.split('/').pop()?.slice(1) || ''
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' })
+      return
+    }
+  }
+
+  private footNoteScroll = (event: Event) => {
+    const target = event.target as HTMLAnchorElement
+    if (target.tagName === 'A') {
+      event.preventDefault()
+      const hash = target.href.split('/').pop()?.slice(1) || ''
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -158,7 +184,7 @@ class Scroll {
     document.addEventListener('pjax:success', this.setHTML)
     document.addEventListener('touchstart', this.startTouch)
     document.addEventListener('touchmove', this.checkTouchMove)
-    document.addEventListener('touchend', this.endTouch)
+    document.addEventListener('touchend', this.checkPos)
     document.addEventListener('wheel', (event: WheelEvent) => {
       if (document.querySelector('.expanded') || window.innerWidth > 1024) {
         return

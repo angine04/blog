@@ -13,7 +13,7 @@ aside
             i(alt=name,class=value.split('||')[1].trim())
   #aside-block
     block aside-block
-    if page.published === undefined
+    if page.title === undefined
       section#total
         a#total-archives(href= url_for("archives"))
           span.total-title #{__('menu.archive.plural')} #{__('menu.total')}:
@@ -34,7 +34,11 @@ aside
       each content, title in theme.aside.copyright
         nobr
           span.icp-title= title
-          span.icp-content= content
+          if typeof content === 'string'
+            span.icp-content= content
+          else
+            each href, name in content
+              a(href=href).icp-content= name
         br
     div(style="margin-top: 64px")
       span(xmlns:cc="http://creativecommons.org/ns#")
@@ -54,17 +58,18 @@ aside
       span 版权与致谢详见
         a(href="/about") 关于页
       |。
-    span(id="timeDate") 运行一年以来
-    span(id="times") 
-    br
-    span 共 
-    span(id="busuanzi_container_site_uv")
-      span(id="busuanzi_value_site_uv") 很多
-      span 人 
-    span(id="busuanzi_container_site_pv")
-      span(id="busuanzi_value_site_pv") 很多
-      span 次访问
-    br
+    if theme.busuanzi.enable
+      span(id="timeDate") 运行一年以来
+      span(id="times") 
+      br
+      span 共 
+      span(id="busuanzi_container_site_uv")
+        span(id="busuanzi_value_site_uv") 很多
+        span 人 
+      span(id="busuanzi_container_site_pv")
+        span(id="busuanzi_value_site_pv") 很多
+        span 次访问
+      br
     //- nobr #{__('footer.publish')} 
     span(style="margin-left:-3px")
       a(href= 'http://hexo.io') Hexo
