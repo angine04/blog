@@ -2,6 +2,10 @@ if pjax
   script(async src=url_for("js/pjax.js"))
 
 script.pjax-js reset= () => {
+  //- if theme.mermaid && theme.mermaid.enable === true && theme.mermaid.version
+  //-   |import mermaid from '#{"https://s4.zstatic.net/npm/mermaid@" + theme.mermaid.version + "/dist/mermaid.esm.mjs"}';
+  //-   |window.mermaid = mermaid;
+  //-   |code.paintMermaid();
   if theme.valine && theme.valine.enable === true
     |new Valine({
     |  el: '#valine'

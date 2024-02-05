@@ -79,7 +79,7 @@ main:not(.up) .search #search-header
   padding 0 0 0 1px
   overflow-y auto
 #loading
-  font-family 'JetBrains Mono'
+  font-family 'Fira Code'
   display flex
   justify-content center
   div
@@ -99,7 +99,7 @@ main:not(.up) .search #search-header
 #search-result
   width 100%
   .recent-post
-    font-family 'JetBrains Mono'
+    font-family 'Fira Code'
     margin 0
     padding 8px
     border none
@@ -119,7 +119,7 @@ main:not(.up) .search #search-header
     overflow hidden
     .search-keyword
       background-color var(--theme-highlight)
-      color var(--theme-text-light)
+      color var(--theme-text-search-keyword)
     .search-result-title
       font-size 1.1em
 #no-result p
@@ -130,4 +130,4 @@ main:not(.up) .search #search-header
     article,
     aside,
     #canvas-dust
-      filter blur(0.8px)
+      filter blur(4px)
