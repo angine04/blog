@@ -127,7 +127,13 @@ main:not(.up) .search #search-header
 
 @media ( min-width 1024px )
   .blur
+    main
+      backdrop-filter blur(24px)
+      -webkit-backdrop-filter blur(24px)
     article,
     aside,
     #canvas-dust
-      filter blur(4px)
+      filter blur(24px)
+    #Archives, #Categories, #Tags, .posts, #post-bg
+      backdrop-filter none
+      -webkit-backdrop-filter none
