@@ -17,8 +17,8 @@ color: dark-only
 
 # <body> 背景图片链接
 background_image:
-  dark: https://s1.ax1x.com/2023/01/21/pSGUgUA.png  # 暗色模式
-  light: https://s1.ax1x.com/2023/01/21/pSGUgUA.png # 亮色模式
+  dark: https://s1.ax1x.com/2023/04/30/p9362tK.png  # 暗色模式
+  light: https://s1.ax1x.com/2023/04/30/p9362tK.png # 亮色模式
 
 # 导航栏
 menu:
@@ -77,11 +77,11 @@ archives:
 search:
   enable: true
   content: true # 若为 false，仅可搜索标题及 metadata
-  preload: false # 自动加载搜索数据
+  preload: true # 自动加载搜索数据
   # 设为 post 时，仅可搜索 post 页面
   # 设为 page 时，仅可搜索非 post 页面
   # 设为 all 时，可搜索全部页面
-  field: post
+  field: all
   # 设为 html 时，依据 html 文件生成
   # 设为 striptags 时，滤除 html tag
   # 设为 raw 时，依据 markdown 源文件生成
