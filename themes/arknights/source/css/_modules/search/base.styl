@@ -71,14 +71,10 @@ main:not(.up) .search #search-header
   z-index 20
   transition transform .6s
   overflow-wrap anywhere
-  @media ( min-width 1024px )
-    position fixed
-    bottom 0
-    height calc(100vh - 120px)
+  position fixed
+  bottom 0
+  height calc(100vh - 120px - 4em)
   @media ( max-width 1023px )
-    position fixed
-    bottom 0
-    height calc(100vh - 120px - 4em)
     width 428px
     max-width 100%
   width 32%
@@ -113,8 +109,8 @@ main:not(.up) .search #search-header
 #search-result
   width 100%
   .recent-post
-    @media ( max-width 1023px )
-      background-color none;
+    // @media ( max-width 1023px )
+    //   background-color none;
     font-family 'Noto Sans','Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
     margin 0
     padding 8px
@@ -147,8 +143,10 @@ main:not(.up) .search #search-header
   text-align center
 
 .up + .search-popup .recent-post
-  background-color var(--theme-bg-cover)
-
+    background-color var(--theme-bg-cover)
+    &:hover
+      transition .3s
+      background-color var(--theme-highlight)
 
 // @media ( min-width 1024px )
 .blur
