@@ -35,8 +35,6 @@ html(lang=config.language theme-mode=theme.color)
       .loading(style="opacity: 0;")
         .loadingBar.left
         .loadingBar.right
-    .search-popup(tabindex="0")
-      #search-result
     main
       include ./header.pug
       article
@@ -46,5 +44,7 @@ html(lang=config.language theme-mode=theme.color)
           block content
         include ./bottom-btn.pug
       include ./aside.pug
+    .search-popup(tabindex="0")
+      #search-result
     if theme.canvas_dust
       canvas#canvas-dust

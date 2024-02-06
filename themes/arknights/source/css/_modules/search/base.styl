@@ -37,7 +37,8 @@
   
 main:not(.up) .search #search-header
   position absolute
-  top 40px
+  // top 40px
+  top calc(2em+64px)
   input
     animation get-out .6s
 
@@ -70,10 +71,14 @@ main:not(.up) .search #search-header
   z-index 20
   transition transform .6s
   overflow-wrap anywhere
-  position fixed
-  bottom 0
-  height calc(100vh - 120px)
+  @media ( min-width 1024px )
+    position fixed
+    bottom 0
+    height calc(100vh - 120px)
   @media ( max-width 1023px )
+    position fixed
+    bottom 0
+    height calc(100vh - 120px - 4em)
     width 428px
     max-width 100%
   width 32%
@@ -91,6 +96,14 @@ main:not(.up) .search #search-header
     overflow hidden
     display table-caption
 
+.up + .search-popup
+  @media ( max-width 1023px )
+    position fixed
+    bottom 0
+    height calc(100vh - 50px - 2em)
+    width 428px
+    max-width 100%
+
 @keyframes loading
   0%
     width calc(100% - 1.5em)
@@ -100,6 +113,8 @@ main:not(.up) .search #search-header
 #search-result
   width 100%
   .recent-post
+    @media ( max-width 1023px )
+      background-color none;
     font-family 'Noto Sans','Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
     margin 0
     padding 8px
@@ -131,19 +146,23 @@ main:not(.up) .search #search-header
 #no-result p
   text-align center
 
-@media ( min-width 1024px )
-  .blur
-    main
-      pointer-events none 
-      backdrop-filter blur(24px)
-      -webkit-backdrop-filter blur(24px)
-    canvas
-      backdrop-filter blur(24px)
-      -webkit-backdrop-filter blur(24px)
-    article,
-    aside,
-    #canvas-dust
-      filter blur(24px)
-    #Archives, #Categories, #Tags, .posts, #post-bg
-      backdrop-filter none
-      -webkit-backdrop-filter none
+.up + .search-popup .recent-post
+  background-color var(--theme-bg-cover)
+
+
+// @media ( min-width 1024px )
+.blur
+  main
+    pointer-events none 
+    backdrop-filter blur(24px)
+    -webkit-backdrop-filter blur(24px)
+  canvas
+    backdrop-filter blur(24px)
+    -webkit-backdrop-filter blur(24px)
+  article,
+  aside,
+  #canvas-dust
+    filter blur(24px)
+  #Archives, #Categories, #Tags, .posts, #post-bg
+    backdrop-filter none
+    -webkit-backdrop-filter none
