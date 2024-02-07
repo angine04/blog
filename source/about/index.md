@@ -48,7 +48,7 @@ Motto: By the power of language. | 以语言之力。
 
 本站由[Hexo](https://hexo.io/)强力驱动。主题由[Yue_Plus](https://github.com/Yue-plus)开发的[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)魔改而来，我另起了一个名字，叫做**Unterwasser**。
 
-本站使用GitHub Pages。
+本站托管于Vercel。
 
 本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
@@ -90,3 +90,5 @@ Motto: By the power of language. | 以语言之力。
 **2023年9月6日**   升级了主题的版本。当前的版本是一个稳定的版本，在相当长的时间内应该不会再升级了。
 
 **2024年1月20日**   加入[开往](https://www.travellings.cn/)。
+
+**2024年2月6日**   迁移到[Vercel](https://vercel.com/)。

@@ -53,7 +53,7 @@ social:
 post:
   date: true # 是否显示发布日期
   updated: true # 是否显示修改日期
-  excerpt: true # 是否在文章中显示摘要内容（<!-- more--> 以上的内容）
+  excerpt: false # 是否在文章中显示摘要内容（ 以上的内容）
   # 文章末显示打赏二维码
   reward:
     # 支付宝 | Alipay: img/Alipay.png

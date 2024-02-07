@@ -29,10 +29,6 @@ jobs:
         run: npm install
       - name: Generate permalinks
         run: gulp gen-link
-      - name: Build
-        run: npm run build
-      - name: Minify
-        run: gulp minify
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
@@ -43,6 +39,8 @@ jobs:
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Minify
+        run: gulp minify
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
 
