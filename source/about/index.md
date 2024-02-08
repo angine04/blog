@@ -63,6 +63,8 @@ Motto: By the power of language. | 以语言之力。
 
 本站背景摄于瓜大Minecraft生存服五周目·阳澄湖底。大桥是轨道交通逍遥线铁路桥。
 
+使用RSS订阅本站：[angine.tech/atom.xml](https://angine.tech/atom.xml)
+
 ## 许可协议
 
 除非在文章中另有说明，否则本站所有内容均采用[知识共享署名-相同方式共享 4.0 国际](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)许可协议进行共享。
