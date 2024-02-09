@@ -40,7 +40,7 @@ Kikomas老师，认识了大约有5年了吧。造语艺术的巨佬，难以望
 湖南大学的学长。
 我是看到了cyp0633的博客，才决定自己也搭建一个博客网站的。
 
-# [Flucloud](flucloud.netlify.app)
+# [Flucloud](https://flucloud.netlify.app)
 
 瓜大文社的好友，兼机器人大赛的战友。
 

@@ -1,12 +1,3 @@
-@font-face {
-    font-family: Fira Code;
-    src: url(/font/FiraCode.ttf);
-}
-
-// @font-face {
-//     font-family: Noto Sans;
-//     src: url(/font/NotoSans.ttf);
-// }
 
 html, body, label
   cursor var(--cursor-data) 3 3, default
@@ -23,7 +14,7 @@ body
   background-position center bottom
   background-repeat no-repeat
   background-size cover
-  font-family 'Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
+  font-family 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 
 main
   height 100vh
@@ -33,7 +24,7 @@ main
   box-sizing border-box
 
 h1, h2, h3, h4, h5, h6
-//  color var(--theme-text-light)
+  //  color var(--theme-text-light)
   margin-block-start .33em
   margin-block-end .23em
   padding-top .2em
@@ -41,6 +32,7 @@ h1, h2, h3, h4, h5, h6
 
 p
   overflow visible
+  hyphens auto
 
 a
   text-decoration none
@@ -64,19 +56,20 @@ a,
       color var(--theme-text-hover)
       background-color var(--theme-subcolor)
 
+a:has(code)
+  padding unset
+
 button
   background var(--theme-bg-soft)
   color var(--theme-text-light)
-  font-family 'Fira Code'
+  font-family 'Fira Code', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
   border unset
 
 time
-  font-family Bender
-
-
+  font-family 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 
 code, pre
-  font-family 'Fira Code'
+  font-family 'Fira Code', 'monospace', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 code
   margin 0!important
   background-color var(--theme-bg-soft-hover)
@@ -92,7 +85,7 @@ kbd
   margin 0 2px
   border-radius 2px
   padding 0 3px
-  font-family 'Fira Code'
+  font-family 'Fira Code', 'monospace', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 
 :not(a) > :is(strong, em)
   color var(--theme-light)
@@ -110,8 +103,6 @@ blockquote
     padding-right 0
   &:hover
     background-color var(--theme-bg-soft-hover)
-ol
-  overflow auto
 
 li
   margin-block-start .2em
@@ -145,4 +136,4 @@ a, button, input, textarea
 input
   cursor var(--cursor) 3 3, text
   user-select none
-  font-family 'Fira Code','Noto Sans SC','Noto Sans JP','Microsoft Yahei','sans-serif'
+  font-family 'Fira Code', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'

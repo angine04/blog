@@ -22,25 +22,17 @@
     },
     code: {
       codeInfo: __('code.codeInfo'),
-      copy: __('code.copy'),
-      copyFinish: __('code.copyFinish'),
-      expand: __('code.expand')
+      copy: __('code.copy')
     }
   })
 
 doctype html
 html(lang=config.language theme-mode=theme.color)
   head
-    <meta name="baidu-site-verification" content="codeva-jWEq3ogFiF" />
-    script(async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js")
-    link(href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet")
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     include ./meta-data.pug
   body
     if pjax
-      .loading(style='opacity: 0')
+      .loading(style="opacity: 0;")
         .loadingBar.left
         .loadingBar.right
     main
@@ -52,6 +44,7 @@ html(lang=config.language theme-mode=theme.color)
           block content
         include ./bottom-btn.pug
       include ./aside.pug
+    .search-popup(tabindex="0")
+      #search-result
     if theme.canvas_dust
       canvas#canvas-dust
-    include ./js-data.pug

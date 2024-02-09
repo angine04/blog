@@ -1,0 +1,300 @@
+
+
+#logo
+    margin-top 10px
+    margin-bottom 100px
+
+#logo img
+    padding-top 36px
+    padding-bottom 72px
+
+#Dr
+    display none
+
+
+
+.control
+    font-family Bender
+
+input::-webkit-input-placeholder{
+    font-family Bender
+    color #aaa
+}
+
+#input::-webkit-input-placeholder{
+    font-family "Fira Code" "Bender" 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
+}
+
+
+#pages
+    border-color rgba(0, 0, 0, 0)
+    margin-top 36px
+    margin-bottom 12px
+
+.footer-link
+    border-color #3dc9c2 !important
+
+
+
+@media (max-width 768px)
+    #logo img
+        opacity 0.05
+        position fixed
+        bottom (-72px + 10%)
+        left -5%
+        width 70%
+        pointer-events none
+
+blockquote
+    margin 24px 16px
+
+#post-content p
+    padding 0 8px
+    text-align justify
+    text-wrap pretty !important
+
+a
+    word-break break-all
+
+del
+    color #666
+
+:root {
+  /* 字体大小 */
+  --waline-font-size: 16px;
+
+  /* 常规颜色 */
+  --waline-white: #fff;
+  --waline-light-grey: #999;
+  --waline-dark-grey: #666;
+
+  /* 主题色 */
+  --waline-theme-color: #3dc9c2;
+  --waline-active-color: hsl(177, 47%, 49%);
+
+  /* 布局颜色 */
+  --waline-color: #ddd;
+  --waline-bgcolor: #fff;
+  --waline-bgcolor-light: #f8f8f8;
+  --waline-bgcolor-hover: #f0f0f0;
+  --waline-border-color: #ddd;
+  --waline-disable-bgcolor: #f8f8f8;
+  --waline-disable-color: #bbb;
+  --waline-code-bgcolor: #282c34;
+
+  /* 特殊颜色 */
+  --waline-bq-color: #f0f0f0;
+
+  /* 头像 */
+  --waline-avatar-size: 3.25rem;
+  --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+
+  /* 徽章 */
+  --waline-badge-color: #3498db; 
+  --waline-badge-font-size: 0.775em;
+
+  /* 信息 */
+  --waline-info-bgcolor: #f8f8f8;
+  --waline-info-color: #999;
+  --waline-info-font-size: 0.625em;
+
+  /* 渲染选择 */
+  --waline-border: 1px solid var(--waline-border-color);
+  --waline-avatar-radius: 50%;
+  --waline-box-shadow: none;
+}
+
+darkmode-selector {
+  /* 常规颜色 */
+  --waline-white: #000;
+  --waline-light-grey: #666;
+  --waline-dark-grey: #999;
+
+  /* 布局颜色 */
+  --waline-color: #ddd; 
+  --waline-bgcolor: rgba(0,0,0,0.2);
+  --waline-bgcolor-light:rgba(0,0,0,0.1);
+  --waline-border-color: #333;
+  --waline-disable-bgcolor: #444;
+  --waline-disable-color: #272727;
+
+  /* 特殊颜色 */
+  --waline-bq-color: #272727;
+
+  /* 其他颜色 */
+  --waline-info-bgcolor: #272727;
+  --waline-info-color: #666;
+}
+
+.wl-panel{
+  background-color: rgba(0,0,0,0.2) 
+}
+  
+#waline a{
+  background-color: rgba(0,0,0,0); 
+}
+
+.wl-actions > a {
+    color #888
+}
+
+.wl-actions > a:hover{
+  color: #3dc9c2; 
+}
+
+#waline {
+    margin 36px 30px !important
+}
+
+.wl-login-nick{
+    padding 0 0    
+}
+
+
+@media (min-width 769px){
+
+    #creative-commons{
+        text-align: justify
+    }
+
+    .recent-post{
+        padding: 24px 36px;
+    }
+
+    .item-img{
+        text-align center !important
+    }
+
+    #post-content img{
+        max-width 60%
+        max-height 32em
+        display inline-block
+    }
+
+    #post-content{
+        font-size: 125%
+    }
+        
+}
+
+
+    .recent-post{
+    margin-bottom: 0;
+    border: #cccccc 0;
+    background: rgba(black,0.2);}
+
+
+@media (max-width 769px){
+    #creative-commons{
+        margin-top: 36px;
+        text-align: center
+    }
+    #post-content{
+        font-size: 100%
+    }
+}
+
+#text-secret, #text-secret a, #text-secret a:visited{
+    transition: color 0.13s linear;
+    color: white;
+    text-shadow: none;
+}
+
+#text-secret{
+    background-color: white;
+}
+
+#text-secret:hover, #text-secret:active{
+    color: #333;
+}
+
+aside footer{
+    font-family: 'Fira Code', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
+    color #aaa !important
+}
+
+.recent-post time
+    color #ccc
+
+#total
+    background: none
+
+// [theme-mode=light] .footer-link a:not(:hover),
+// [theme-mode=light] aside footer {
+//   text-shadow: none !important;
+//   color: #fff;
+// }
+
+// [theme-mode=light] .recent-post
+//     border-color #333
+
+// [theme-mode=light] .recent-post time
+//     color #333
+
+// [theme-mode=light] .navItemTitle {
+//   text-shadow: 0 0 15px #fdf3a8, 0 0 15px #fdf3a8, 0 0 15px #fdf3a8, 0 0 15px #fdf3a8;
+// }
+
+// [theme-mode=light] .navItemTitle,
+// [theme-mode=light] aside footer {
+//   font-weight: normal;
+// }
+
+// .js-Pjax-remove{
+//     display: none !important;    
+// }
+
+#color-mode{
+    display:none;
+}
+
+.navBlock > .navItemTitle {
+    text-shadow: none !important
+}
+
+.recent-post .categories, .recent-post .tags{
+    font-family: 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif';
+}
+
+#search-input::placeholder{
+    color:#fff;
+    font-family: 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif';
+}
+
+@media (min-width 1600px){
+    #post-bg{
+        width: 80%;
+        margin-left: 10%
+    }
+    .posts{
+        width: 80%;
+        margin-left: 10%
+    }
+    .bottom-btn{
+        margin-right: 10%
+    }
+}
+
+// .material-icons{
+//     font-size: 24px;    
+// }
+
+.ex-title{
+    font-size: 70%    
+}
+
+:root[theme-mode=dark] .mermaid{
+    fill: #1f2020;    
+}
+
+aside footer{
+    font-size: 70%;
+    font-weight: normal;
+}
+
+.article-item:nth-last-child(2){
+    margin-bottom: 47px !important
+}
+
+#canvas-dust
+    opacity:0.3

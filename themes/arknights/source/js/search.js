@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+(() => {
   let fetched = false, fetching = false, waiting = false
   let datas
   const path = config.root + 'search.json'
@@ -97,11 +97,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     getElement('#search-result').querySelectorAll('a').
       forEach((item) => item.setAttribute('tabindex', -1))
-    document.body.classList.remove('blur')
+    // document.body.classList.remove('blur')
     popup.classList.remove('open')
   }
   function proceedSearch() {
-    document.body.classList.add('blur')
+    // document.body.classList.add('blur')
     if (document.querySelector('.up') && document.querySelector('.closed')) {
       getElement('.navBtn').classList.add('expanded')
     }
@@ -250,6 +250,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function StartSearch() {
     nav.classList.add('search')
     nav.classList.add('search-moving')
+    document.body.classList.add('blur')
     clearTimeout(lastEvent)
     lastEvent = setTimeout(() => nav.classList.remove('search-moving'), 600)
     header.closeAll()
@@ -273,6 +274,7 @@ window.addEventListener('DOMContentLoaded', () => {
     clearTimeout(lastEvent)
     lastEvent = setTimeout(() => nav.classList.remove('search-moving'), 600)
     onPopupClose()
+    document.body.classList.remove('blur')
     input.value = ''
     input.placeholder = blurHolder
     document.removeEventListener('mouseup', EscapeSearch)
@@ -319,4 +321,4 @@ window.addEventListener('DOMContentLoaded', () => {
       EscapeSearch()
     }
   })
-})
+})()

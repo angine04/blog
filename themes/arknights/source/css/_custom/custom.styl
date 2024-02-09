@@ -11,18 +11,16 @@
 #Dr
     display none
 
-
-
 .control
-    font-family Bender
+    font-family 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 
 input::-webkit-input-placeholder{
-    font-family Bender
+    font-family 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
     color #aaa
 }
 
 #input::-webkit-input-placeholder{
-    font-family "Fira Code" "Bender" "Microsoft Yahei"
+    font-family "Fira Code", "Bender", 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 }
 
 
@@ -106,7 +104,7 @@ del
 
 darkmode-selector {
   /* 常规颜色 */
-  --waline-white: #000;
+  --waline-white: #fff;
   --waline-light-grey: #666;
   --waline-dark-grey: #999;
 
@@ -283,9 +281,9 @@ aside footer{
     font-size: 70%    
 }
 
-:root[theme-mode=dark] .mermaid{
-    fill: #1f2020;    
-}
+// :root[theme-mode=dark] .mermaid{
+//     fill: #1f2020;    
+// }
 
 aside footer{
     font-size: 70%;
@@ -296,5 +294,11 @@ aside footer{
     margin-bottom: 47px !important
 }
 
-#canvas-dust
-    opacity:0.3
+.mermaid
+    text-align center
+
+mjx-container
+    text-align center
+
+label[for="wl-image-upload"]
+    display none

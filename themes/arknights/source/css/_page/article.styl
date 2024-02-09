@@ -10,9 +10,11 @@ article
 
 .posts
   margin-top 10px
-  padding-bottom 72px
+  margin-bottom 72px
+  backdrop-filter blur(24px)
+  -webkit-backdrop-filter blur(24px)
   width 100%
-  min-height calc(100vh - 82px)
+  // min-height calc(100vh - 82px)
 
 .recent-post
   background-color var(--theme-bg-trans1)
@@ -25,7 +27,7 @@ article
   .recent-info::after
     transition .3s
   .categories, .tags
-    font-family Bender, sans-serif
+    font-family 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
   .categories
     color var(--theme-highlight)
     font-size large
@@ -113,7 +115,7 @@ article
   background-color var(--theme-highlight)
   margin-top -21px
   padding 3px 10px 3px 40px
-  font-family BenderLight
+  font-family 'BenderLight', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 
 #paginator
   width 100%
@@ -140,3 +142,9 @@ article
   .current
     color var(--theme-text-hover)
     background-color var(--theme-highlight)
+
+@media ( max-width 768px )
+  .posts
+    margin-bottom 0
+  #paginator
+    position static
