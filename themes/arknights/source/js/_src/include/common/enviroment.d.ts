@@ -8,12 +8,12 @@ declare var config: {
   }
   code: {
     copy: string
-    copyFinish: string
     codeInfo: string
-    expand: string
   }
 }
 
 declare var mermaid: {
+  run: Function
   init: Function
+  initialize: Function
 } | undefined

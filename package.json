@@ -9,15 +9,16 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.0.0"
+    "version": "7.1.1"
   },
   "dependencies": {
     "babel": "^6.23.0",
     "cors": "^2.8.5",
+    "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-rename": "^2.0.0",
-    "hexo": "7.0.0",
+    "hexo": "7.1.1",
     "hexo-browsersync": "^0.3.0",
     "hexo-cli": "^4.3.1",
     "hexo-deployer-git": "^4.0.0",
@@ -33,10 +34,10 @@
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.2.0",
     "hexo-renderer-pug": "^3.0.0",
-    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-util": "^3.0.1",
+    "hexo-util": "^3.2.0",
     "hexo-wordcount": "^6.0.1",
     "html-minifier": "^4.0.0",
     "readable-stream": "^4.5.2",

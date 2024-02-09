@@ -16,12 +16,12 @@ aside
   padding 0 20px
   h1
     transition .6s
-    font-family BenderLight, sans-serif
+    font-family 'BenderLight', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
     margin-top 0
   footer
     color var(--theme-unimportant)
     padding 0 3px 30px 3px
-    font-family Bender
+    font-family 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
     font-weight bold
 
 #logo
@@ -41,7 +41,7 @@ aside
     color var(--theme-text-light)
 
 #total
-  font-family BenderLight
+  font-family 'BenderLight', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
   div
     display inline-block
 
@@ -61,7 +61,6 @@ aside
     display block
   .total-number
     font-weight bolder
-    font-size 52px
     padding 0 10px
     transition .3s
   @media ( min-width 769px )
@@ -71,7 +70,7 @@ aside
       .total-number
         color var(--theme-highlight)
 
-#total-tags, #total-categories
+#total-tags, #total-categories, #total-view
   margin 5px 5px 5px 10px
 
 #aside-block
@@ -94,3 +93,11 @@ aside
 #description p
   margin unset
   text-align center
+
+@media ( max-width 768px )
+  #about
+    position fixed
+
+@media ( min-width 769px )
+  #badges
+    margin-top 64px

@@ -10,16 +10,14 @@ const pipeline = require('readable-stream').pipeline;
 gulp.task('gen-link', function () {
     return gulp.src('source/_posts/**/*.md')
         .pipe(through.obj(function (file, encode, cb) {
-            const contentsString = file.contents.toString();
+            const contents = file.contents.toString();
             const regex = /@@linkhash/g;
-            if (regex.test(contentsString)) {
+            if (regex.test(contents)) {
                 time = new Date().toLocaleTimeString('it-IT');
                 console.log("[" + time + "] Found @@linkhash at " + file.relative);
-                const hash = crypto.createHash('sha256');
-                hash.update(file.contents);
-                let hashValue = hash.digest('hex').substring(0, 4);
-                console.log("[" + time + "] Hash generated: " + hashValue);
-                let result = contentsString.replace(regex, hashValue);
+                const hash = crypto.createHash('sha256').update(file.contents).digest('hex').substring(0, 4);
+                console.log("[" + time + "] Hash generated: " + hash);
+                let result = contents.replace(regex, hash);
                 file.contents = new Buffer.from(result, encode);
             }
             this.push(file);
@@ -29,7 +27,7 @@ gulp.task('gen-link', function () {
 });
 
 gulp.task('minify-html', function () {
-    return gulp.src('./public/**/*.html')
+    return gulp.src('./.vercel/output/static/**/*.html')
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: false,
@@ -40,31 +38,31 @@ gulp.task('minify-html', function () {
             minifyJS: true,  //压缩页面JS
             minifyCSS: true  //压缩页面CSS
         }))
-        .pipe(gulp.dest('./public'));
+        .pipe(gulp.dest('./.vercel/output/static'));
 });
 
 gulp.task('minify-css', function () {
-    return gulp.src('./public/**/*.css')
+    return gulp.src('./.vercel/output/static/**/*.css')
         .pipe(cssmin())
-        .pipe(gulp.dest('./public/'));
+        .pipe(gulp.dest('./.vercel/output/static/'));
 });
 
 gulp.task('minify-js', function (cb) {
     return pipeline(
-        gulp.src('./public/**/*.js'),
+        gulp.src('./.vercel/output/static/**/*.js'),
         uglify(),
-        gulp.dest('./public/'),
+        gulp.dest('./.vercel/output/static/'),
         cb
     );
 });
 
 // gulp.task("minify-images", function () {
 //     return gulp
-//         .src("./public/**/*.{jpg,png,svg,gif}")
+//         .src("./.vercel/output/static/**/*.{jpg,png,svg,gif}")
 //         .pipe(
 //             imagemin()
 //         )
-//       .pipe(gulp.dest("./public"));
+//       .pipe(gulp.dest("./.vercel/output/static"));
 //   });
 
 gulp.task(

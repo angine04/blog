@@ -7,10 +7,16 @@ page:
   noCategory: 无分类
   sticky: 置顶
 
+busuanzi:
+  loading: "加载中..."
+  siteView: "总访问量："
+  siteVisitor: "访客数："
+  pageView: "页面浏览: "
+
 post:
-  posted: "文章发布时间: "
-  edited: "最后更新时间: "
-  countTotal: "文章总字数: "
+  posted: "发布时间: "
+  edited: "最后更新: "
+  countTotal: "总字数: "
   timeTotal: "预计阅读时间: "
   timeUnit: 分钟
   index: 目录
@@ -19,8 +25,12 @@ post:
   next: ← 下一篇
   prev: 上一篇 →
 
+encrypt:
+  confirm: 确认
+
 code:
   codeInfo: $0 - $1 行
+  copy: 复制
 
 btn:
   totop: 回到顶部
@@ -43,13 +53,13 @@ menu:
 
 search:
   activeHolder: Type here
-  blurHolder: Search the blog
-  noResult: 空空如也
+  blurHolder: Search
+  noResult: 空无一物
 
 footer:
-  publish: 本站基于
-  theme: 使用主题
-  by: 主题作者
+  publish: on
+  theme: 主题
+  by: by
 
 Valine:
   placeHolder: By the power of language.

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /nwpuacg/
+
+User-agent: *
+Disallow: /images/
+
+Sitemap: https://www.angine.tech/sitemap.xml

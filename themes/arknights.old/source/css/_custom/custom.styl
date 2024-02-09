@@ -1,17 +1,4 @@
 
-@font-face {
-    font-family: Fira Code;
-    src: url(/font/FiraCode.ttf);
-}
-
-@font-face {
-    font-family: Noto Sans;
-    src: url(/font/NotoSans.ttf);
-}
-
-body
-    background-position center bottom !important
-    background-size cover !important
 
 #logo
     margin-top 10px
@@ -27,15 +14,15 @@ body
 
 
 .control
-    font-family BenderLight
+    font-family Bender
 
 input::-webkit-input-placeholder{
-    font-family BenderLight
+    font-family Bender
     color #aaa
 }
 
 #input::-webkit-input-placeholder{
-    font-family "Fira Code" "BenderLight" "Microsoft Yahei"
+    font-family "Fira Code" "Bender" 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
 }
 
 
@@ -64,8 +51,12 @@ blockquote
 #post-content p
     padding 0 8px
     text-align justify
+    text-wrap pretty !important
 
-deleeeeeeeeeeeeeeee
+a
+    word-break break-all
+
+del
     color #666
 
 :root {
@@ -159,23 +150,47 @@ darkmode-selector {
     padding 0 0    
 }
 
-#creative-commons-img{
-    background-color: rgba(0,0,0,0) !important
-}
 
 @media (min-width 769px){
+
     #creative-commons{
-        display: flex;
         text-align: justify
     }
+
+    .recent-post{
+        padding: 24px 36px;
+    }
+
+    .item-img{
+        text-align center !important
+    }
+
+    #post-content img{
+        max-width 60%
+        max-height 32em
+        display inline-block
+    }
+
+    #post-content{
+        font-size: 125%
+    }
+        
 }
+
+
+    .recent-post{
+    margin-bottom: 0;
+    border: #cccccc 0;
+    background: rgba(black,0.2);}
 
 
 @media (max-width 769px){
     #creative-commons{
         margin-top: 36px;
-        display: flex;
         text-align: center
+    }
+    #post-content{
+        font-size: 100%
     }
 }
 
@@ -193,15 +208,16 @@ darkmode-selector {
     color: #333;
 }
 
-aside footer, article{
-    font-family: 'Fira Code', 'Noto Sans', 'Noto Sans SC', 'Noto Sans JP', 'Microsoft Yahei' !important;
+aside footer{
+    font-family: 'Fira Code', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
+    color #aaa !important
 }
-
-.recent-post
-    border-color #ccc
 
 .recent-post time
     color #ccc
+
+#total
+    background: none
 
 // [theme-mode=light] .footer-link a:not(:hover),
 // [theme-mode=light] aside footer {
@@ -231,3 +247,54 @@ aside footer, article{
 #color-mode{
     display:none;
 }
+
+.navBlock > .navItemTitle {
+    text-shadow: none !important
+}
+
+.recent-post .categories, .recent-post .tags{
+    font-family: 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif';
+}
+
+#search-input::placeholder{
+    color:#fff;
+    font-family: 'Bender', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif';
+}
+
+@media (min-width 1600px){
+    #post-bg{
+        width: 80%;
+        margin-left: 10%
+    }
+    .posts{
+        width: 80%;
+        margin-left: 10%
+    }
+    .bottom-btn{
+        margin-right: 10%
+    }
+}
+
+// .material-icons{
+//     font-size: 24px;    
+// }
+
+.ex-title{
+    font-size: 70%    
+}
+
+:root[theme-mode=dark] .mermaid{
+    fill: #1f2020;    
+}
+
+aside footer{
+    font-size: 70%;
+    font-weight: normal;
+}
+
+.article-item:nth-last-child(2){
+    margin-bottom: 47px !important
+}
+
+#canvas-dust
+    opacity:0.3

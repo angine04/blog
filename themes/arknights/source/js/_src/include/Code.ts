@@ -4,6 +4,8 @@
 'use strict'
 
 class Code {
+  private mermaids: string[] = []
+
   private doAsMermaid = (item: Element) => {
     let Amermaid = item.querySelector('.mermaid') as HTMLElement
     item.outerHTML = '<div class="highlight mermaid">' + Amermaid.innerText + '</div>'
@@ -33,7 +35,7 @@ class Code {
         <span class="ex-title">${format(config.code.codeInfo, codeType, lineCount)}</span>
       </div>
       <div class="ex-content">${item.innerHTML}
-        <button class="code-copy"></button>
+        <button class="code-copy" title="${config.code.copy}"></button>
       </div>`
     getElement('.code-copy', item).addEventListener('click', (click: Event) => {
       const button = click.target as HTMLElement
@@ -45,13 +47,15 @@ class Code {
     })
   }
 
-  private clearMermaid = () => {
-    document.querySelectorAll('.mermaid').forEach((item) => {
-      let style = item.querySelector('style')
-      if (style) {
-        style.remove()
-      }
-    })
+  public paintMermaid = () => {
+    if (typeof (mermaid) === 'undefined') return;
+    mermaid.initialize(document.documentElement.getAttribute('theme-mode') === 'dark' ?
+      { theme: 'dark' } : { theme: 'default' })
+    if (typeof(mermaid.run) !== 'undefined') {
+      mermaid.run({ querySelector: '.mermaid' })
+    } else {
+      mermaid.init()
+    }
   }
 
   public findCode = () => {
@@ -74,16 +78,26 @@ class Code {
         }
       })
     }
-    if(typeof(mermaid) !== 'undefined') {
-      mermaid.init()
-      this.clearMermaid()
-    }
+    document.querySelectorAll('.mermaid').forEach((item) => {
+      this.mermaids.push(item.outerHTML)
+    })
     expand.setHTML()
+  }
+
+  public resetMermaid = () => {
+    if (typeof (mermaid) === 'undefined') return;
+    let id = 0
+    document.querySelectorAll('.mermaid').forEach((item) => {
+      item.outerHTML = this.mermaids[id]
+      ++id
+    })
+    this.paintMermaid()
   }
 
   constructor() {
     this.findCode()
     document.addEventListener('pjax:success', this.findCode)
+    window.addEventListener('hexo-blog-decrypt', this.findCode)
   }
 }
 

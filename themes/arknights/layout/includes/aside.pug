@@ -13,7 +13,7 @@ aside
             i(alt=name,class=value.split('||')[1].trim())
   #aside-block
     block aside-block
-    if page.published === undefined
+    if page.title === undefined
       section#total
         a#total-archives(href= url_for("archives"))
           span.total-title #{__('menu.archive.plural')} #{__('menu.total')}:
@@ -34,41 +34,51 @@ aside
       each content, title in theme.aside.copyright
         nobr
           span.icp-title= title
-          span.icp-content= content
+          if typeof content === 'string'
+            span.icp-content= content
+          else
+            each href, name in content
+              a(href=href).icp-content= name
         br
-    div(id="creative-commons" style="margin-top: 64px")
+    div#badges
       span(xmlns:cc="http://creativecommons.org/ns#")
-        img(style="height:22px!important;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1")
-        img(style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1")
-        img(style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1")
-        br
-        |除非另有说明，本站内容采用
-        a(href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer") 知识共享署名-相同方式共享 4.0 国际许可协议
-        |。
-        br
-        |如转载，请注明原作者为<b>安擎Angine</b>，并附上<b>本页链接</b>。
-    br
-    span(id="timeDate") 载入运行时长……
-    span(id="times") 
-    span 总计获 
-    span(id="busuanzi_container_site_uv")
-      span(id="busuanzi_value_site_uv")
-      span 人 
-    span(id="busuanzi_container_site_pv")
-      span(id="busuanzi_value_site_pv")
-      span 次访问
-    br
-    br
-    // nobr #{__('footer.publish')} 
-    nobr 由
+        a(href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="padding:0")
+          img(style="height:1.2rem!important; margin-bottom:-0.1rem" src="/images/cc.svg")
+          img(style="height:1.2rem!important; margin-bottom:-0.1rem" src="/images/by.svg")
+          img(style="height:1.2rem!important; margin-bottom:-0.1rem" src="/images/sa.svg")
+      wbr
+      span(style="margin-left:4px; margin-bottom:0.1rem")
+        a(href="https://www.travellings.cn/go.html" title="开往下一个世界：随机跳转到一个新的网站" style="padding:0")
+          img(src="https://www.travellings.cn/assets/w.png" style="height:1rem")
+      wbr
+      span(style="margin-left:4px")
+        a(href="https://notbyai.fyi/" title="Not by AI" style="padding:0")
+          img(src="/images/not-by-ai.svg" style="height:1rem;")
+    div
+      span 版权与致谢详见
+        a(href="/about") 关于页
+      |。
+    if theme.busuanzi.enable
+      span(id="timeDate") 运行一年以来
+      span(id="times") 
+      br
+      span 共 
+      span(id="busuanzi_container_site_uv")
+        span(id="busuanzi_value_site_uv") 很多
+        span 人 
+      span(id="busuanzi_container_site_pv")
+        span(id="busuanzi_value_site_pv") 很多
+        span 次访问
+      br
+    //- nobr #{__('footer.publish')} 
+    span(style="margin-left:-3px")
       a(href= 'http://hexo.io') Hexo
-      span 强力驱动
     wbr
     nobr  #{__('footer.theme')} 
-      a(href= 'https://github.com/Yue-plus/hexo-theme-arknights') Arknights 
-    wbr
-    nobr  #{__('footer.by')} 
-      a(href= 'https://github.com/Yue-plus') Yue_plus
+      a(href='https://github.com/angine04/hexo-theme-unterwasser') Unterwasser
+    //- wbr
+    //- nobr  #{__('footer.by')} 
+    //-   a(href= 'https://github.com/Yue-plus') Yue_plus&nbsp;
     br
-    br
-    nobr <span>©2023 Angine</span>
+    nobr
+      span ©2023 Angine

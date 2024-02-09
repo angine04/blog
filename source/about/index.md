@@ -4,15 +4,17 @@ date: 2023-01-22 02:33:30
 published: true
 ---
 
+<!-- htmlmin:ignore -->
 <!-- If you're wandering ABOUT, try the spell openSesame -->
+<!-- htmlmin:ignore -->
 
 # 关于我
 
  - 鄙人**安擎**。这个网名已经用了十几年了。
  - 现用英文id：**Angine**。读若/andʒɪn/。
  - 曾用英文id：**Anqring** /ankɹɪŋ/，后因读音不直观更换。出于历史惯性，该id仍在使用。
- - 为了区别不同的身份~~防止人设崩塌而社死~~，还有若干笔名网名。
- - 西北瓜业大学计算机系大一在读。在遍地大佬之中瑟瑟发抖。
+ - ~~为了防止人设崩塌而社死，~~还有若干笔名网名。
+ - 西北瓜业大学计算机系大二在读。在遍地大佬之中瑟瑟发抖。
  - 来自~~察哈尔~~河北省。
  - 不会写小说的VOCALOID区up主不是一个好造语者（？）
  - ~~别扭矫情孤僻古怪的~~普通文青。曾有过一个文科梦。
@@ -40,23 +42,28 @@ published: true
 # 关于本站
 
 Angine's blog. | 安擎的博客。
-Slogan: By the power of language. | 以语言之力。
+Motto: By the power of language. | 以语言之力。
 
 会记录一些涉及到技术、语言学、文艺、生活琐事、莫名其妙的感受与思考……一类的内容。
 
-本站由[Hexo](https://hexo.io/)强力驱动。主题[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)由[Yue_Plus](https://github.com/Yue-plus)开发。我对其进行了部分修改，以适应本站需要。本站使用GitHub Pages。
+本站由[Hexo](https://hexo.io/)强力驱动。主题由[Yue_Plus](https://github.com/Yue-plus)开发的[Arknights](https://github.com/Yue-plus/hexo-theme-arknights)魔改而来，我另起了一个名字，叫做**Unterwasser**。
+
+本站托管于Vercel。
 
 本站于2023年1月1日上线。已运行<span id="aboutTimeDate">不知多少天</span><span id="aboutTimes">多少小时</span>。
 
 本站使用的主题由于我的各种魔改，已经面目全非并充满各种bug。已知bug如下：
  - ~~在夸克等浏览器下显示不正确。（Won't fix）~~ 现在已经显示正常。（2023.5.1）
  - ~~Pjax还是有那么一点点小问题。（已禁用pjax）~~ Pjax似乎已可以正常工作。已在Edge和Firefox下测试。（2023.5.1）
+ - ~~升级主题之后，公式不知为何不居中了。~~ 睡了一觉之后似乎好了。莫非这就是睡觉的力量？（2024.2.6）
+ - 而且，pjax会导致mermaid无法加载，需要刷新。
 
 一言以蔽之：我太菜了。有缘再修吧（
 发现其他bug欢迎提issue或者直接在本页面评论。
 
-本站背景摄于瓜大Minecraft生存服五周目·阳澄湖底。大桥是天船运河公司·阳澄湖线铁路桥。
-白色主题背景是随便找的。有点晃眼，以后换。(当前已禁用白色主题。)
+本站背景摄于瓜大Minecraft生存服五周目·阳澄湖底。大桥是轨道交通逍遥线铁路桥。
+
+使用RSS订阅本站：[angine.tech/atom.xml](https://angine.tech/atom.xml)
 
 ## 许可协议
 
@@ -84,3 +91,6 @@ Slogan: By the power of language. | 以语言之力。
 
 **2023年9月6日**   升级了主题的版本。当前的版本是一个稳定的版本，在相当长的时间内应该不会再升级了。
 
+**2024年1月20日**   加入[开往](https://www.travellings.cn/)。
+
+**2024年2月6日**   迁移到[Vercel](https://vercel.com/)。

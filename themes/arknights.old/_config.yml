@@ -1,11 +1,19 @@
+
+# 标签页图标
+favicon:
+  type: "image/x-icon"
+  href: "/favicon.ico"
+
 # canvas 动态背景
 canvas_dust: true
 
-# 默认颜色模式 dark / light / auto
+# 默认颜色模式 dark / dark-only / light / light-only / auto
 # dark 暗色模式
 # light 亮色模式
+# -only 锁定颜色模式
+
 # auto 跟随系统
-color: dark
+color: dark-only
 
 # <body> 背景图片链接
 background_image:
@@ -26,9 +34,17 @@ aside:
   dr: / # 侧边栏 Dr. 链接
   icp: # ICP 备案号，与版权声明相同，但会链接到 https://beian.miit.gov.cn/
   copyright: "如无特殊说明，本站所有原创作品均采用知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议进行许可。
-如转载，请注明原作者为安擎Angine，并附上本页链接。" 
+如转载，请注明原作者为安擎Angine，并附上本页链接。"    # 版权声明、备案号等，可自定义键值，不想显示则留空
 
-# 版权声明、备案号等，可自定义键值，不想显示则留空
+# 社交链接
+# 格式：链接 || 图标
+# 所有可用图标参考：https://fontawesome.com/icons
+social:
+  # GitHub: https://github.com/yourname || fab fa-github
+  # E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  # BiliBili: https://space.bilibili.com/0000000 || fa-brands fa-bilibili
+  # Weibo: https://weibo.com/yourname || fab fa-weibo
+  # Zhihu: https://www.zhihu.com/people/yourname || fab fa-zhihu
 
 # post 文章页面配置；true / false
 post:
@@ -58,7 +74,7 @@ archives:
 search:
   enable: true
   content: true # 若为 false，仅可搜索标题及 metadata
-  preload: all # 自动加载搜索数据
+  preload: false # 自动加载搜索数据
   # 设为 post 时，仅可搜索 post 页面
   # 设为 page 时，仅可搜索非 post 页面
   # 设为 all 时，可搜索全部页面
@@ -85,7 +101,7 @@ gitalk:
   repo: # 用于存放评论数据的 GitHub 仓库
   owner: # 该 GitHub 仓库所有者
   admin: [] # 具有写该 GitHub 仓库权限的用户，例如: [adminA,adminB]
-  id: # (可选) 页面的唯一标识，例如: location.pathname
+  id: location.pathname # (可选) 页面的唯一标识
 
 # Waline
 # 详情: https://waline.js.org/
@@ -96,7 +112,7 @@ waline:
 # 图表支持
 mermaid:
   enable: true
-  version: '9.2.2'
+  version: "9.2.2"
 
 # pjax 支持
 pjax:
@@ -105,11 +121,12 @@ pjax:
 # 公式前端渲染
 mathjax:
   enable: false
-  version: '2.6.1'
+  version: "2.6.1"
 
 # 在 `<head>` 标签内引入 CSS 样式表
 stylesheets:
-  - //unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css # 代码高亮样式
+  - //unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css
+
 # 在 `<body>` 尾部引入 JavaScript 脚本
 scripts:
   - /scripts/about.js
