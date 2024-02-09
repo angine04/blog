@@ -30,7 +30,7 @@ menu:
 # 侧边栏
 aside:
   in_left: false # 侧边栏在左 true / false
-  logo: https://s1.ax1x.com/2023/01/23/pSJ5OVH.png #图片链接，建议 1:1 比例
+  logo: https://s11.ax1x.com/2024/02/10/pF3wgc8.png #图片链接，建议 1:1 比例
   dr: / # 侧边栏 Dr. 链接
   icp: # ICP 备案号，与版权声明相同，但会链接到 https://beian.miit.gov.cn/
   copyright: # 版权声明、备案号等，可自定义键值，不想显示则留空
