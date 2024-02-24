@@ -1,10 +1,10 @@
 ---
 title: 我的自制开源字体——Angine Sans
 tags:
-  - TAG1
-  - TAG2
+  - 字体
+  - 开源
 post-index: true
-categories: CATEGORY
+categories: Tech
 linkhash: '@@linkhash'
 date: 2024-02-24 20:31:36
 updated: 2024-02-24 20:31:36
