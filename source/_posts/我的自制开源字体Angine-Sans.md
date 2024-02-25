@@ -31,7 +31,9 @@ updated: 2024-02-24 20:31:36
 
 最后放上所有ASCII字符供大家参考显示效果：
 
-!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+!"#$%&'()*+,-./0123456789:;<=>?@
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 
 
 <style>
