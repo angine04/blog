@@ -1,6 +1,10 @@
 ---
 title: 传送门
 date: 2023-01-22 02:49:10
+photos: false
+mathjax: false
+mermaid: false
+comments: true
 ---
 
 <style>

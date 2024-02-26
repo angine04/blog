@@ -7,11 +7,14 @@ tags:
   - 识别
   - 计算机视觉
 post-index: true
+photos: true
+mathjax: true
+mermaid: false
+comments: true
 categories: Dev
 linkhash: '4729'
 date: 2023-05-21 21:14:49
 updated: 2023-5-25 12:44:32
-mathjax: true
 ---
 
  > 先叠甲：本人在实践和探索过程中不可避免地参考了大量文章，并有可能把相应的内容反映到本文中。如您认为您的权利受到侵犯，请与我联系。

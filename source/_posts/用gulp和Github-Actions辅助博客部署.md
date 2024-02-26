@@ -4,6 +4,10 @@ tags:
   - gulp
   - 建站
 post-index: true
+photos: false
+mathjax: false
+mermaid: false
+comments: true
 categories: Dev
 linkhash: '79dd'
 date: 2023-12-24 07:23:25

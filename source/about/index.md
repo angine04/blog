@@ -2,6 +2,10 @@
 title: 关于我
 date: 2023-01-22 02:33:30
 published: true
+photos: false
+mathjax: false
+mermaid: false
+comments: true
 ---
 
 <!-- htmlmin:ignore -->

@@ -12,18 +12,18 @@ if theme.valine && theme.valine.enable === true
 if theme.gitalk && theme.gitalk.enable === true
   script(async src=url_for("js/gitalk.js"))
 
-if theme.mermaid && theme.mermaid.enable === true && theme.mermaid.version && is_post()
+if theme.mermaid && theme.mermaid.enable === true && theme.mermaid.version && page.mermaid
   script(defer type='module').
     import mermaid from '#{"https://s4.zstatic.net/npm/mermaid@" + theme.mermaid.version + "/dist/mermaid.esm.mjs"}';
     window.mermaid = mermaid;
     code.paintMermaid();
 
-if theme.waline && theme.waline.enable === true && is_post()
+if theme.waline && theme.waline.enable === true && page.comments
   script(async type='module').
     import { init } from 'https://s4.zstatic.net/npm/@waline/client@v2/dist/waline.mjs';
     window.waline = init;
 
-if theme.mathjax && theme.mathjax.enable === true
+if theme.mathjax && theme.mathjax.enable === true && page.mathjax
   script(async src="https://s4.zstatic.net/ajax/libs/mathjax/" + theme.mathjax.version + "/MathJax.js")
   script.
     MathJax.Hub.Config({
@@ -50,7 +50,7 @@ if theme.scripts && theme.scripts.length > 0
   each url in theme.scripts
     script(defer src=url)
 
-if is_post()
+if page.photos
   script(async src="https://s4.zstatic.net/npm/lightgallery@2.7.1/lightgallery.min.js")
   script(async src="https://s4.zstatic.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js")
   script(async src="https://s4.zstatic.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js")

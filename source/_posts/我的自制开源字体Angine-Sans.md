@@ -4,6 +4,10 @@ tags:
   - 字体
   - 开源
 post-index: true
+photos: true
+mathjax: false
+mermaid: false
+comments: true
 categories: Tech
 linkhash: 'cbe2'
 date: 2024-02-24 20:31:36
