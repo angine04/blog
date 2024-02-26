@@ -1,6 +1,6 @@
 if page.posts.length > 0
   each post in page.posts.limit((config.per_page === 0) ? 9999999 : config.per_page).toArray()
-    a(href=url_for(post.path)).recent-post
+    a(href=url_for(post.path) aria-label=post.title).recent-post
       object
         .recent-info
           span.categories
