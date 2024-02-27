@@ -45,6 +45,7 @@
     "valine": "^1.5.1"
   },
   "devDependencies": {
+    "fontaine": "^0.4.1",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-uglify": "^3.0.2"

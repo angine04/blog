@@ -8,14 +8,15 @@ link(
   type=(theme.favicon.type ? theme.favicon.type : "image/x-icon")
   href=(url_for(theme.favicon.href ? theme.favicon.href : "favicon.ico"))
 )
+//- link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/Bender.woff2"))
+//- link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/BenderLight.woff2"))
+link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/MaterialIcons.woff2"))
 link(href="https://fonts.googleapis.cn/css?family=Noto+Sans" rel="preload" as="style")
 link(href="https://fonts.googleapis.cn/css?family=Noto+Sans+SC" rel="preload" as="style")
 link(href="https://fonts.googleapis.cn/css?family=Noto+Sans+JP" rel="preload" as="style")
 //- link(href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="preload" as="style")
 //- link(href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="stylesheet")
 link(href="https://fonts.googleapis.cn/css?family=Fira+Code" rel="preload" as="style")
-link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/Bender.woff2"))
-link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/BenderLight.woff2"))
 if page.angine_sans
   style
     |@font-face{
@@ -27,17 +28,17 @@ if page.angine_sans
     |  font-family: 'Angine Sans', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
     |}
 link(rel="stylesheet", href=url_for("css/arknights.css"))
-style.
-  @font-face {
-    font-family: Bender;
-    src: local('Bender'), url("#{config.root}font/Bender.woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: BenderLight;
-    src: local('BenderLight'), url("#{config.root}font/BenderLight.woff2");
-    font-display: swap;
-  }
+//- style.
+//-   @font-face {
+//-     font-family: Bender;
+//-     src: local('Bender'), url("#{config.root}font/Bender.woff2");
+//-     font-display: swap;
+//-   }
+//-   @font-face {
+//-     font-family: BenderLight;
+//-     src: local('BenderLight'), url("#{config.root}font/BenderLight.woff2");
+//-     font-display: swap;
+//-   }
 
 script var config = !{configs}
 if theme.waline && theme.waline.enable === true && page.comments
