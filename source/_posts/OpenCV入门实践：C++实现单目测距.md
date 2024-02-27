@@ -11,6 +11,7 @@ photos: true
 mathjax: true
 mermaid: false
 comments: true
+code: true
 categories: Dev
 linkhash: '4729'
 date: 2023-05-21 21:14:49

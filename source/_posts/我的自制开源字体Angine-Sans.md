@@ -9,11 +9,13 @@ mathjax: false
 mermaid: false
 comments: true
 angine_sans: true
+code: false
 categories: Tech
 linkhash: 'cbe2'
 date: 2024-02-24 20:31:36
 updated: 2024-02-24 20:31:36
 ---
+<span class="angine-sans">
 
 话不多说，先上样图。
 
@@ -37,7 +39,10 @@ updated: 2024-02-24 20:31:36
 
 最后放上所有ASCII字符供大家参考显示效果：
 
+<div style="font-size:150%; text-align:center">
 !"#$%&'()*+,-./0123456789:;<=>?@
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 [\\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+</div>
 
+</span>

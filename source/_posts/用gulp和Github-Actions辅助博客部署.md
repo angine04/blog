@@ -8,6 +8,7 @@ photos: false
 mathjax: false
 mermaid: false
 comments: true
+code: true
 categories: Dev
 linkhash: '79dd'
 date: 2023-12-24 07:23:25

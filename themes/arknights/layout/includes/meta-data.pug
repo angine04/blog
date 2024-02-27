@@ -18,11 +18,12 @@ link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/Bende
 if page.angine_sans
   style
     |@font-face{
-    | font-family: 'Angine Sans';
-    | src: local('Angine Sans'), url("/font/AngineSans.woff2");
+    |  font-family: 'Angine Sans';
+    |  src: local('Angine Sans'), url("/font/AngineSans.woff2");
+    |  font-display: swap
     |}
-    |#post-bg{
-    | font-family: 'Angine Sans', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
+    |.angine-sans{
+    |  font-family: 'Angine Sans', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
     |}
 link(rel="stylesheet", href=url_for("css/arknights.css"))
 style.
@@ -46,6 +47,8 @@ if page.images
   link(type="text/css" rel="stylesheet" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lg-zoom.css")
   link(type="text/css" rel="stylesheet" href="https://s4.zstatic.net/npm/lightgallery@2.7.1/css/lg-thumbnail.css")
 //- link(type="text/css" rel="stylesheet" href=url_for("/lib/fontawesome/css/all.min.css"))
+if page.code
+  link(href="https://s4.zstatic.net/npm/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark-reasonable.min.css" rel="preload" as="style")
 
 if theme.stylesheets && theme.stylesheets.length > 0
   //- stylesheets list from _config.yml
