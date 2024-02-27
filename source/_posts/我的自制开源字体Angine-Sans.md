@@ -43,7 +43,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 <style>
   @font-face{
     font-family: 'Angine Sans';
-    src: local('Angine Sans'), url("#{config.root}font/AngineSans.otf");
+    src: local('Angine Sans'), url("#{config.root}font/AngineSans.woff2");
   }
   #post-bg{
   font-family: 'Angine Sans', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;

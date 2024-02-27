@@ -13,19 +13,19 @@ link(href="https://fonts.googleapis.cn/css?family=Noto+Sans+JP" rel="preload" as
 //- link(href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="preload" as="style")
 link(href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="stylesheet")
 link(href="https://fonts.googleapis.cn/css?family=Fira+Code" rel="preload" as="style")
-link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/Bender.ttf"))
-link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/BenderLight.ttf"))
+link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/Bender.woff2"))
+link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/BenderLight.woff2"))
 
 link(rel="stylesheet", href=url_for("css/arknights.css"))
 style.
   @font-face {
     font-family: Bender;
-    src: local('Bender'), url("#{config.root}font/Bender.ttf"), url("#{config.root}font/Bender.otf");
+    src: local('Bender'), url("#{config.root}font/Bender.woff2"), url("#{config.root}font/Bender.otf");
     font-display: swap;
   }
   @font-face {
     font-family: BenderLight;
-    src: local('BenderLight'), url("#{config.root}font/BenderLight.ttf");
+    src: local('BenderLight'), url("#{config.root}font/BenderLight.woff2");
     font-display: swap;
   }
 
