@@ -11,16 +11,24 @@ link(href="https://fonts.googleapis.cn/css?family=Noto+Sans" rel="preload" as="s
 link(href="https://fonts.googleapis.cn/css?family=Noto+Sans+SC" rel="preload" as="style")
 link(href="https://fonts.googleapis.cn/css?family=Noto+Sans+JP" rel="preload" as="style")
 //- link(href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="preload" as="style")
-link(href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="stylesheet")
+//- link(href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="stylesheet")
 link(href="https://fonts.googleapis.cn/css?family=Fira+Code" rel="preload" as="style")
 link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/Bender.woff2"))
 link(rel="preload", as="font", crossorigin="anonymous", href=url_for("font/BenderLight.woff2"))
-
+if page.angine_sans
+  style
+    |@font-face{
+    | font-family: 'Angine Sans';
+    | src: local('Angine Sans'), url("/font/AngineSans.woff2");
+    |}
+    |#post-bg{
+    | font-family: 'Angine Sans', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
+    |}
 link(rel="stylesheet", href=url_for("css/arknights.css"))
 style.
   @font-face {
     font-family: Bender;
-    src: local('Bender'), url("#{config.root}font/Bender.woff2"), url("#{config.root}font/Bender.otf");
+    src: local('Bender'), url("#{config.root}font/Bender.woff2");
     font-display: swap;
   }
   @font-face {

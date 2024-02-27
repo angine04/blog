@@ -8,11 +8,13 @@ photos: true
 mathjax: false
 mermaid: false
 comments: true
+angine_sans: true
 categories: Tech
 linkhash: 'cbe2'
 date: 2024-02-24 20:31:36
 updated: 2024-02-24 20:31:36
 ---
+
 话不多说，先上样图。
 
 ![样图1](https://ooo.0x0.ooo/2024/02/24/OyiJ3v.png)
@@ -39,13 +41,3 @@ updated: 2024-02-24 20:31:36
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 [\\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 
-
-<style>
-  @font-face{
-    font-family: 'Angine Sans';
-    src: local('Angine Sans'), url("#{config.root}font/AngineSans.woff2");
-  }
-  #post-bg{
-  font-family: 'Angine Sans', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
-  }
-</style>
