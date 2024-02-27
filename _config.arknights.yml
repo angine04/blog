@@ -90,7 +90,7 @@ search:
 # 不蒜子
 # 详见 http://busuanzi.ibruce.info/
 busuanzi:
-  enable: true
+  enable: false
   # sitePV: true # 站点总访问量
   # siteUV: true # 站点访客数
   pagePV: false # 页面访问量
