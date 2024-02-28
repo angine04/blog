@@ -7,6 +7,6 @@
       - const tocContent = encrypted === undefined ? toc(page.content, theme.toc) : toc(page.origin, theme.toc)
       if tocContent.length > 0
         a#to-index.i-index(href="#toc-div" title=__('btn.index'))
-          <span class="material-icons">menu</span> 
+          <span class="material-icons">M</span> 
     if theme.color !== 'dark-only' && theme.color !== 'light-only'
       a#color-mode.i-color(onClick="colorMode.change()" title=__('btn.colorMode'))

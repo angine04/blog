@@ -28,17 +28,17 @@ if page.angine_sans
     |  font-family: 'Angine Sans', 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif' !important;
     |}
 link(rel="stylesheet", href=url_for("css/arknights.css"))
-//- style.
-//-   @font-face {
-//-     font-family: Bender;
-//-     src: local('Bender'), url("#{config.root}font/Bender.woff2");
-//-     font-display: swap;
-//-   }
-//-   @font-face {
-//-     font-family: BenderLight;
-//-     src: local('BenderLight'), url("#{config.root}font/BenderLight.woff2");
-//-     font-display: swap;
-//-   }
+style.
+  @font-face {
+    font-family: Bender;
+    src: local('Bender'), url("#{config.root}font/Bender.woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: BenderLight;
+    src: local('BenderLight'), url("#{config.root}font/BenderLight.woff2");
+    font-display: swap;
+  }
 
 script var config = !{configs}
 if theme.waline && theme.waline.enable === true && page.comments
