@@ -35,7 +35,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Project Artifacts
-        run: hexo g
+        run: npm build
       - name: Minify
         run: gulp minify
       - name: Deploy
