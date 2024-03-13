@@ -57,3 +57,7 @@ Kikomas老师，认识了大约有5年了吧。造语艺术的巨佬。
 # [70loKirin](https://qllokirin.github.io/)
 
 海院学长，tql。
+
+# [zzsqwq](https://blog.zzsqwq.cn)
+
+机器人基地已毕业的大神学长，tql。
