@@ -1,0 +1,50 @@
+name: Blog Production Deploy
+
+env:
+  ECS_WWWROOT_KEY: ${{secrets.ECS_WWWROOT_KEY}}
+  SERVER_HOST: ${{secrets.ECS_SERVER_HOST}}
+  USER_NAME: ${{secrets.ECS_USER_NAME}}
+
+on:
+  push:
+    branches:
+      - main # default branch
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Generate permalinks
+        run: gulp gen-link
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build Project Artifacts
+        run: hexo g
+      - name: Minify
+        run: gulp minify
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
+          SSH_PRIVATE_KEY: ${{ env.ECS_WWWROOT_KEY }}
+          ARGS: '-avz --delete'
+          SOURCE: 'public/'
+          REMOTE_HOST: ${{ env.SERVER_HOST }}
+          REMOTE_USER: ${{ env.USER_NAME }}
+          TARGET: /home/wwwroot/blog/production
+
