@@ -39,6 +39,9 @@ jobs:
         run: npm run build
       - name: Minify
         run: gulp minify
+      - name: Install Rsync
+        uses: GuillaumeFalourd/setup-rsync@v1.2
+      - run: rsync --version
       - name: Deploy
         uses: easingthemes/ssh-deploy@v5.0.3
         env:
