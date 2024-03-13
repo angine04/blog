@@ -40,7 +40,7 @@ jobs:
       - name: Minify
         run: gulp minify
       - name: Deploy
-        uses: easingthemes/ssh-deploy@v2.0.7
+        uses: easingthemes/ssh-deploy@v5.0.3
         env:
           SSH_PRIVATE_KEY: ${{ env.ECS_WWWROOT_KEY }}
           ARGS: '-avz --delete'
