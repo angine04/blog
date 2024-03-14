@@ -1,12 +1,12 @@
 .bottom-btn
   div
     a#to-top.i-top(onClick="scrolls.scrolltop();" title=__('btn.totop') style="opacity: 0; display: none;") 
-      <span class="material-icons">arrow_upward</span> 
+      <span class="material-icons">U</span> 
     if page.content
       - const encrypted = page.encrypt || page.password
       - const tocContent = encrypted === undefined ? toc(page.content, theme.toc) : toc(page.origin, theme.toc)
       if tocContent.length > 0
         a#to-index.i-index(href="#toc-div" title=__('btn.index'))
-          <span class="material-icons">menu</span> 
+          <span class="material-icons">M</span> 
     if theme.color !== 'dark-only' && theme.color !== 'light-only'
       a#color-mode.i-color(onClick="colorMode.change()" title=__('btn.colorMode'))

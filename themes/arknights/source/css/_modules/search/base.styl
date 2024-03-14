@@ -72,7 +72,7 @@ main:not(.up) .search #search-header
   transition transform .6s
   overflow-wrap anywhere
   position fixed
-  bottom 0
+  top calc(120px + 4em)
   height calc(100vh - 120px - 4em)
   @media ( max-width 1023px )
     width 428px
@@ -95,7 +95,7 @@ main:not(.up) .search #search-header
 .up + .search-popup
   @media ( max-width 1023px )
     position fixed
-    bottom 0
+    top calc(50px + 2em)
     height calc(100vh - 50px - 2em)
     width 428px
     max-width 100%
@@ -111,6 +111,7 @@ main:not(.up) .search #search-header
   .recent-post
     // @media ( max-width 1023px )
     //   background-color none;
+    height 92px
     font-family 'Noto Sans', 'San Francisco', 'Arial', 'Helvetica', 'Droid Sans', 'Noto Sans SC', 'PingFang SC', 'Noto Sans JP', 'Microsoft Yahei', 'sans-serif'
     margin 0
     padding 8px

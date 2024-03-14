@@ -27,7 +27,7 @@ gulp.task('gen-link', function () {
 });
 
 gulp.task('minify-html', function () {
-    return gulp.src('./.vercel/output/static/**/*.html')
+    return gulp.src('./public/**/*.html')
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: false,
@@ -38,31 +38,31 @@ gulp.task('minify-html', function () {
             minifyJS: true,  //压缩页面JS
             minifyCSS: true  //压缩页面CSS
         }))
-        .pipe(gulp.dest('./.vercel/output/static'));
+        .pipe(gulp.dest('./public'));
 });
 
 gulp.task('minify-css', function () {
-    return gulp.src('./.vercel/output/static/**/*.css')
+    return gulp.src('./public/**/*.css')
         .pipe(cssmin())
-        .pipe(gulp.dest('./.vercel/output/static/'));
+        .pipe(gulp.dest('./public/'));
 });
 
 gulp.task('minify-js', function (cb) {
     return pipeline(
-        gulp.src('./.vercel/output/static/**/*.js'),
+        gulp.src('./public/**/*.js'),
         uglify(),
-        gulp.dest('./.vercel/output/static/'),
+        gulp.dest('./public/'),
         cb
     );
 });
 
 // gulp.task("minify-images", function () {
 //     return gulp
-//         .src("./.vercel/output/static/**/*.{jpg,png,svg,gif}")
+//         .src("./public/**/*.{jpg,png,svg,gif}")
 //         .pipe(
 //             imagemin()
 //         )
-//       .pipe(gulp.dest("./.vercel/output/static"));
+//       .pipe(gulp.dest("./public"));
 //   });
 
 gulp.task(

@@ -1,6 +1,6 @@
 if page.posts.length > 0
   each post in page.posts.limit((config.per_page === 0) ? 9999999 : config.per_page).toArray()
-    a(href=url_for(post.path)).recent-post
+    a(href=url_for(post.path) aria-label=post.title).recent-post
       object
         .recent-info
           span.categories
@@ -23,7 +23,7 @@ if page.posts.length > 0
           if post.sticky > 0
             //- span.post-sticky #{__('page.sticky')}
             span.post-sticky(title="置顶")
-              span.material-icons(style="font-size:18px!important") push_pin
+              span.material-icons(style="font-size:18px!important") P
           = post.title
         .recent-excerpt
           if post.excerpt.length > 0

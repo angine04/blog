@@ -3,7 +3,12 @@ title: 为rEFInd启用Secure Boot
 tags:
   - 安全启动
   - rEFInd
+photos: false
+mathjax: false
+mermaid: true
+comments: true
 post-index: true
+code: false
 categories: Dev
 linkhash: 'fb54'
 date: 2023-05-27 02:24:49

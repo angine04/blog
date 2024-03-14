@@ -1,6 +1,10 @@
 ---
 title: 传送门
 date: 2023-01-22 02:49:10
+photos: false
+mathjax: false
+mermaid: false
+comments: true
 ---
 
 <style>
@@ -16,17 +20,17 @@ date: 2023-01-22 02:49:10
 # <!--<img src="https://s1.lozumi.com/logo/icon.png" style="height:1.75em; width:1.75em; margin-right: 6px" />--> [洛衣博客](https://www.lozumi.com)
  > 不负时光，幸甚相逢
 
-nico同学，我校数院同届的大佬，多才且自律。难以望其项背！
+nico同学，我校数院同届的大佬，多才且自律。
 
 # <!--<img src="/images/portals/kikomas.art.png" style="height:1.75em; width:1.75em; margin-right: 6px" />--> [kikomas.art](https://kikomas.art)
  > kikomas的个人作品站 - 我来自星辰之间
 
-Kikomas老师，认识了大约有5年了吧。造语艺术的巨佬，难以望其项背！
+Kikomas老师，认识了大约有5年了吧。造语艺术的巨佬。
 
 # [KirCute](https://kircute.jimmytoluene.com/)
  > 卡比三卖萌KirCute的博客
 
-同校的巨佬，基地的前辈。难以望其项背！
+同校的巨佬，基地的前辈。
 
 # [SkyWT](https://skywt.cn)
 
@@ -49,3 +53,11 @@ Kikomas老师，认识了大约有5年了吧。造语艺术的巨佬，难以望
  > 分享设计与科技生活
 
 希望我也能成为这样的设计师+开发者+创作者。
+
+# [70loKirin](https://qllokirin.github.io/)
+
+海院学长，tql。
+
+# [zzsqwq](https://blog.zzsqwq.cn)
+
+机器人基地已毕业的大神学长，tql。
