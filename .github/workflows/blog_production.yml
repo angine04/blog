@@ -48,5 +48,5 @@ jobs:
           ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
           touch ~/.ssh/id_ecs && echo "${{env.ECS_WWWROOT_KEY}}" > ~/.ssh/id_ecs && chmod 600 ~/.ssh/id_ecs
           eval $(ssh-agent) && ssh-add ~/.ssh/id_ecs && scp -v -r -C public.tar.gz ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
-          ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "tar -xzvf ${{env.SERVER_TARGET}}/public.tar.gz"
+          ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "tar -xzvf ${{env.SERVER_TARGET}}/public.tar.gz -C ${{env.SERVER_TARGET}}"
           ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "rm -rf ${{env.SERVER_TARGET}}/production && mv -f ${{env.SERVER_TARGET}}/public ${{env.SERVER_TARGET}}/production"
