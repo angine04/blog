@@ -43,10 +43,8 @@ jobs:
         run: mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
       - name: SSH keyscan
         run: ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
-      - name: Start SSH Agent
-        run: eval $(ssh-agent)
       - name: Add SSH Key
-        run: ssh-add - <<< "${{ secrets.ECS_WWWROOT_KEY }}"
+        run: eval $(ssh-agent) && ssh-add - <<< "${{ secrets.ECS_WWWROOT_KEY }}"
       - name: Deploy
         run: scp -r public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
 
