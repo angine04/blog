@@ -12,7 +12,7 @@ on:
       - main # default branch
 
 jobs:
-  pages:
+  production-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -45,5 +45,5 @@ jobs:
           ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
           touch ~/.ssh/id_ecs && echo "${{env.ECS_WWWROOT_KEY}}" > ~/.ssh/id_ecs && chmod 600 ~/.ssh/id_ecs
           eval $(ssh-agent) && ssh-add ~/.ssh/id_ecs && scp -v -r -C public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
-          ssh ${{env.USER_NAME}}@${{env.SERVER_HOST}} "mv ${{env.SERVER_TARGET}}/public ${{env.SERVER_TARGET}}/production"
+          ssh ${{env.USER_NAME}}@${{env.SERVER_HOST}} "mv -f ${{env.SERVER_TARGET}}/public ${{env.SERVER_TARGET}}/production"
 
