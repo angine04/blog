@@ -1,4 +1,4 @@
-name: Blog Production Deploy
+name: Blog Preview Deploy
 
 env:
   ECS_WWWROOT_KEY: ${{secrets.ECS_WWWROOT_KEY}}
@@ -8,11 +8,11 @@ env:
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main # default branch
 
 jobs:
-  production-deploy:
+  preview-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -49,4 +49,4 @@ jobs:
           touch ~/.ssh/id_ecs && echo "${{env.ECS_WWWROOT_KEY}}" > ~/.ssh/id_ecs && chmod 600 ~/.ssh/id_ecs
           eval $(ssh-agent) && ssh-add ~/.ssh/id_ecs && scp -v -r -C public.tar.gz ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
           ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "tar -xzvf ${{env.SERVER_TARGET}}/public.tar.gz -C ${{env.SERVER_TARGET}}"
-          ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "rm -rf ${{env.SERVER_TARGET}}/production ${{env.SERVER_TARGET}}/public.tar.gz && mv -f ${{env.SERVER_TARGET}}/public ${{env.SERVER_TARGET}}/production"
+          ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "rm -rf ${{env.SERVER_TARGET}}/preview ${{env.SERVER_TARGET}}/public.tar.gz && mv -f ${{env.SERVER_TARGET}}/public ${{env.SERVER_TARGET}}/preview"
