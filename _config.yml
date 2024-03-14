@@ -124,7 +124,7 @@ mathjax:
 
 deploy:
   type: git
-  repo: git@github.com:angine04/angine04.github.io
+  repo: git@github.com:angine04/blog
   branch: gh-pages
 
 feed:

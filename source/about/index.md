@@ -2,6 +2,10 @@
 title: 关于我
 date: 2023-01-22 02:33:30
 published: true
+photos: false
+mathjax: false
+mermaid: false
+comments: true
 ---
 
 <!-- htmlmin:ignore -->
@@ -94,3 +98,7 @@ Motto: By the power of language. | 以语言之力。
 **2024年1月20日**   加入[开往](https://www.travellings.cn/)。
 
 **2024年2月6日**   迁移到[Vercel](https://vercel.com/)。
+
+**2024年3月4日**   完成ICP备案。
+
+**2024年3月5日**   迁移到阿里云。
