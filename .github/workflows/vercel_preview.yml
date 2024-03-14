@@ -1,8 +1,10 @@
-name: Vercel Preview Deploy
+name: Blog Preview Deploy
 
 env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  ECS_WWWROOT_KEY: ${{secrets.ECS_WWWROOT_KEY}}
+  SERVER_HOST: ${{secrets.ECS_SERVER_HOST}}
+  USER_NAME: ${{secrets.ECS_USER_NAME}}
+  SERVER_TARGET: ${{secrets.SERVER_TARGET}}
 
 on:
   push:
@@ -10,7 +12,7 @@ on:
       - main # default branch
 
 jobs:
-  pages:
+  production-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -33,15 +35,18 @@ jobs:
         uses: actions-js/push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
       - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm run build
       - name: Minify
         run: gulp minify
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
-
+      - name: Compress
+        run: |
+          tar -cvzf public.tar.gz ./public/
+      - name: Deploy
+        run: |
+          mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
+          ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
+          touch ~/.ssh/id_ecs && echo "${{env.ECS_WWWROOT_KEY}}" > ~/.ssh/id_ecs && chmod 600 ~/.ssh/id_ecs
+          eval $(ssh-agent) && ssh-add ~/.ssh/id_ecs && scp -v -r -C public.tar.gz ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
+          ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "tar -xzvf ${{env.SERVER_TARGET}}/public.tar.gz -C ${{env.SERVER_TARGET}}"
+          ssh -v ${{env.USER_NAME}}@${{env.SERVER_HOST}} "rm -rf ${{env.SERVER_TARGET}}/preview ${{env.SERVER_TARGET}}/public.tar.gz && mv -f ${{env.SERVER_TARGET}}/public ${{env.SERVER_TARGET}}/preview"
