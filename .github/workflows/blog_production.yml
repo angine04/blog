@@ -44,7 +44,7 @@ jobs:
       - name: SSH keyscan
         run: ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
       - name: Add SSH Key
-        run: cat ${{env.ECS_WWWROOT_KEY}} > ~/.ssh/id_ecs && eval $(ssh-agent) && ssh-add id_ecs
+        run: cat - ${{env.ECS_WWWROOT_KEY}} > ~/.ssh/id_ecs && eval $(ssh-agent) && ssh-add id_ecs
       - name: Deploy
         run: scp -v -r public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
 
