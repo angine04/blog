@@ -5,7 +5,7 @@ tags:
   - TAG2
 post-index: true
 categories: CATEGORY
-linkhash: 'f78d'
+linkhash: @@linkhash
 date: 2024-01-16 14:09:58
 updated: 2024-01-16 14:09:58
 ---
