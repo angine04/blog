@@ -39,14 +39,14 @@ jobs:
         run: npm run build
       - name: Minify
         run: gulp minify
-      - name: Install Rsync
-        uses: GuillaumeFalourd/setup-rsync@v1.2
-        id: rsync
-        with:
-          ssh_key: ${{ secrets.ECS_WWWROOT_KEY }}
-      - run: echo "SSK KEY PATH ${{ steps.rsync.outputs.ssh_key_path }}"
-      - run: rsync --version
-      - run: rsync --version
+      - name: Prepare SSH
+        run: mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
+      - name: SSH keyscan
+        run: ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
+      - name: Start SSH Agent
+        run: eval $(ssh-agent)
+      - name: Add SSH Key
+        run: ssh-add - <<< "${{ secrets.ECS_WWWROOT_KEY }}"
       - name: Deploy
-        run: rsync -avz --delete public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
+        run: scp -r public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
 
