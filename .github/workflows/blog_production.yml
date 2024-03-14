@@ -39,12 +39,11 @@ jobs:
         run: npm run build
       - name: Minify
         run: gulp minify
-      - name: Prepare SSH
-        run: mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
-      - name: SSH keyscan
-        run: ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
-      - name: Add SSH Key
-        run: cat - ${{env.ECS_WWWROOT_KEY}} > ~/.ssh/id_ecs && eval $(ssh-agent) && ssh-add id_ecs
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
+          ssh-keyscan ${{env.SERVER_HOST}} >> ~/.ssh/known_hosts
+          echo "${{env.ECS_WWWROOT_KEY}}" > ~/.ssh/id_ecs && eval $(ssh-agent) && ssh-add id_ecs
       - name: Deploy
         run: scp -v -r public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
 
