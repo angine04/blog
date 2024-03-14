@@ -41,14 +41,12 @@ jobs:
         run: gulp minify
       - name: Install Rsync
         uses: GuillaumeFalourd/setup-rsync@v1.2
+        id: rsync
+        with:
+          ssh_key: ${{ secrets.ECS_WWWROOT_KEY }}
+      - run: echo "SSK KEY PATH ${{ steps.rsync.outputs.ssh_key_path }}"
+      - run: rsync --version
       - run: rsync --version
       - name: Deploy
-        uses: easingthemes/ssh-deploy@v5.0.3
-        env:
-          SSH_PRIVATE_KEY: ${{ env.ECS_WWWROOT_KEY }}
-          ARGS: '-avz --delete'
-          SOURCE: 'public/'
-          REMOTE_HOST: ${{ env.SERVER_HOST }}
-          REMOTE_USER: ${{ env.USER_NAME }}
-          TARGET: ${{env.SERVER_TARGET}}
+        run: rsync -avz --delete public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
 
