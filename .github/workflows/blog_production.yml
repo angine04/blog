@@ -46,5 +46,5 @@ jobs:
       - name: Add SSH Key
         run: eval $(ssh-agent) && ssh-add - <<< "${{ secrets.ECS_WWWROOT_KEY }}"
       - name: Deploy
-        run: scp -r public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
+        run: scp -v -r public/ ${{env.USER_NAME}}@${{env.SERVER_HOST}}:${{env.SERVER_TARGET}} 
 
