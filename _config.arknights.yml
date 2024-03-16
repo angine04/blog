@@ -13,11 +13,11 @@ canvas_dust: true
 # -only 锁定颜色模式
 
 # auto 跟随系统
-color: dark
+color: auto
 
 # <body> 背景图片链接
 background_image:
-  dark: https://ooo.0x0.ooo/2024/02/26/OyKaua.webp  # 暗色模式
+  dark: https://pic.imgdb.cn/item/65f5acd29f345e8d03be5ec0.png  # 暗色模式
   light: https://ooo.0x0.ooo/2024/02/19/OyaQmL.png  # 亮色模式
 
 # 导航栏
